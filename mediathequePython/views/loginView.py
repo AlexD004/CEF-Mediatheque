@@ -14,7 +14,7 @@ def login_page(request):
             )
             if user is not None:
                 login(request, user)
-                message = 'Bonjour ! Vous êtes connecté.'
+                return redirect('accueil')
             else:
                 message = 'Identifiants invalides'
     return render(
