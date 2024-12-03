@@ -16,9 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from mediathequePython import views
+from mediathequePython.views import loginView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.listemedias)
+    path('', loginView.login_page, name='login'),
+    path('logout/', loginView.logout_user, name='logout'),
 ]

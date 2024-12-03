@@ -1,8 +1,10 @@
-<html>
-    <h1>Hello Django!</h1>
+# /templates/lists.html
+{% extends 'base.html' %}
+{% block content %}
+    <h2>Tous les médias</h2>
     <ul>
-         {% for media in medias %}
-         <li> Titre : {{ media.title }}  Sortie : {{ media.release }}</li>
-         {% endfor %}
+        {% for media in medias %}
+        <li> Titre : {{ media.title }}  Sortie : {{ media.release }}</li>
+        {% endfor %}
     </ul>
-</html>
+{% endblock content %}
