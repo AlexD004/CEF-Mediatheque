@@ -1,0 +1,8 @@
+<html>
+    <h1>Hello Django!</h1>
+    <ul>
+         {% for media in medias %}
+         <li> Titre : {{ media.title }}  Sortie : {{ media.release }}</li>
+         {% endfor %}
+    </ul>
+</html>
