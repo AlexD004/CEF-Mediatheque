@@ -1,22 +1,26 @@
 from django.db import models
 
-"""
-    primary_key
-    unique
-    default
-    null
-    blank
+""" Class for Medias Details and Informations """
 
-    CharField
-    IntegerField
-    DateField
-    DateTimeField
-    FloatField
-    EmailField
-    BooleanField
+class Author (models.Model):
+    name = models.CharField(max_length = 100, default = "Inconnu")
 
-    author = models.ForeignKey(Author, on_delete = models.DO_NOTHING)
-"""
+class Editor (models.Model):
+    name = models.CharField(max_length = 100, default = "Inconnu")
+
+class Label (models.Model):
+    name = models.CharField(max_length = 100, default = "Inconnu")
+
+class GroupOrSinger (models.Model):
+    name = models.CharField(max_length = 100, default = "Inconnu")
+
+class Director (models.Model):
+    name = models.CharField(max_length = 100, default = "Inconnu")
+
+class GameEditor (models.Model):
+    name = models.CharField(max_length = 100, default = "Inconnu")
+
+""" Class for Medias """
 
 class Medias (models.Model):
     title = models.CharField(max_length = 100, unique = True)
@@ -24,23 +28,24 @@ class Medias (models.Model):
     dateLoan = models.DateField(null = True, blank = True)
 
 class Livres (Medias):
-    bookEditor = models.CharField(max_length = 100)
-    author = models.CharField(max_length = 100)
+    author = models.ForeignKey(Author, on_delete = models.DO_NOTHING, null = True)
+    editor = models.ForeignKey(Editor, on_delete = models.DO_NOTHING, null = True)
     numPages = models.IntegerField()
 
 class CDs (Medias):
-    musicEditor = models.CharField(max_length = 100)
-    artist = models.CharField(max_length = 100)
+    label = models.ForeignKey(Label, on_delete = models.DO_NOTHING, null = True)
+    artist = models.ForeignKey(GroupOrSinger, on_delete = models.DO_NOTHING, null = True)
     numPist = models.IntegerField()
 
 class DVDs (Medias):
-    studio = models.CharField(max_length = 100)
+    director = models.ForeignKey(Director, on_delete = models.DO_NOTHING, null = True)
     filmDuration = models.IntegerField()
-    director = models.CharField(max_length = 100)
+
+""" Class for Games """
 
 class Jeux (models.Model):
     gameTitle = models.CharField(max_length = 100, unique = True)
-    gameEditor = models.CharField(max_length = 100)
+    gameEditor = models.ForeignKey(GameEditor, on_delete = models.DO_NOTHING, null = True)
     numPlayer = models.IntegerField()
     gameDuration = models.IntegerField()
     issue = models.DateField()
