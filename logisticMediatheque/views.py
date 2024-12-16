@@ -1,8 +1,10 @@
-from django.shortcuts import render
-from django.http import HttpResponse
-from django.template import loader
+from django.shortcuts import render, get_object_or_404
+from .models import Livres
 
 def index(request):
-    context = {"message": "Hello World !"}
-    template = loader.get_template("logisticMediatheque/index.html")
-    return HttpResponse(template.render(context, request))
+    context = {"livres": Livres.objects.all()}
+    return render(request, "logisticMediatheque/index.html", context)
+
+def livreDetail(request, livre_id):
+    context = {"livre": get_object_or_404( Livres, pk = livre_id )}
+    return render(request, "logisticMediatheque/livreDetail.html", context)
