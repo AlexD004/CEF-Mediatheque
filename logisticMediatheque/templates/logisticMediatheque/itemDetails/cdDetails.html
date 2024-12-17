@@ -2,7 +2,9 @@
 
 {% block infosDetails %}
 
-    <h1>{{ cd.title }}</h1>
-    <p>{{ cd.artist.name }}</p>
+    <h2>{{ cd.title }}</h2>
+    <p><strong>Artiste :</strong> {{ cd.artist.name }}</p>
+    <p><strong>Label :</strong> {{ cd.label.name }}</p>
+    <p><strong>Nombre de morceaux :</strong> {{ cd.numPist }}</p>
 
 {% endblock infosDetails %}

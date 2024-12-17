@@ -2,7 +2,9 @@
 
 {% block infosDetails %}
 
-    <h1>{{ livre.title }}</h1>
-    <p>{{ livre.author.name }}</p>
+    <h2>{{ livre.title }}</h2>
+    <p><strong>Auteur :</strong> {{ livre.author.name }}</p>
+    <p><strong>Éditeur :</strong> {{ livre.editor.name }}</p>
+    <p><strong>Pages :</strong> {{ livre.numPages }}</p>
 
 {% endblock infosDetails %}

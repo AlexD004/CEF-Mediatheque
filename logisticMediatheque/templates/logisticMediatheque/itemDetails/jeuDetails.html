@@ -1,13 +1,11 @@
-{% extends 'logisticMediatheque/base.html' %}
+{% extends 'logisticMediatheque/itemDetails/itemDetails.html' %}
 
-{% block content %}
+{% block infosDetails %}
 
-    <h1>{{ jeu.gameTitle }}</h1>
-    <p>Nombre de joueurs : {{ jeu.numPlayer }}</p>
-    <p>Durée : {{ jeu.gameDuration }}</p>
-    <p>Éditeur : {{ jeu.gameEditor.name }}</p>
-    <p>Sortie : {{ jeu.issue }}</p>
+    <h2>{{ jeu.gameTitle }}</h2>
+    <p><strong>Nombre de joueurs :</strong> {{ jeu.numPlayer }}</p>
+    <p><strong>Durée :</strong> {{ jeu.gameDuration }}</p>
+    <p><strong>Éditeur : </strong>{{ jeu.gameEditor.name }}</p>
+    <p><strong>Sortie : </strong>{{ jeu.issue }}</p>
     
-    <p><a href="{% url 'logisticMediatheque:dashboard' %}">Revenir à la liste des médias</a></p>
-
-{% endblock content %}
+{% endblock infosDetails %}

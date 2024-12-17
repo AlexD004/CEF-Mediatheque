@@ -2,7 +2,8 @@
 
 {% block infosDetails %}
 
-    <h1>{{ dvd.title }}</h1>
-    <p>{{ dvd.director.name }}</p>
+    <h2>{{ dvd.title }}</h2>
+    <p><strong>Réalisateur : </strong>{{ dvd.director.name }}</p>
+    <p><strong>Durée : </strong>{{ dvd.filmDuration }}</p>
 
 {% endblock infosDetails %}

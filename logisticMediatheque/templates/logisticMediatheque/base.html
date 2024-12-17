@@ -9,21 +9,28 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
-    <nav id="itemNav">
-        <ul>
-            <li><a href="{% url 'logisticMediatheque:dashboard' %}">Médias</a></li>
-            <li class="submenu">
-                <ul>
-                    <li><a href="{% url 'logisticMediatheque:listLivres' %}">Livres</a></li>
-                    <li><a href="{% url 'logisticMediatheque:listCDs' %}">CDs</a></li>
-                    <li><a href="{% url 'logisticMediatheque:listDVDs' %}">DVDs</a></li>
-                </ul>
-            </li>
-            <li><a href="{% url 'logisticMediatheque:listJeux' %}">Jeux de plateau</a></li>
-            <li><a href="{% url 'logisticMediatheque:listMembres' %}">Membres</a></li>
-            <li><a href="{% url 'logisticMediatheque:historique' %}">Historique</a></li>
-        </ul>
-    </nav>
-    {% block content %}{% endblock %}
+    <div class="flexWrap">
+        <nav id="itemNav">
+            <ul>
+                <li><a href="{% url 'logisticMediatheque:dashboard' %}">Médias</a></li>
+                <li class="submenu">
+                    <ul>
+                        <li><a href="{% url 'logisticMediatheque:listLivres' %}">Livres</a></li>
+                        <li><a href="{% url 'logisticMediatheque:listCDs' %}">CDs</a></li>
+                        <li><a href="{% url 'logisticMediatheque:listDVDs' %}">DVDs</a></li>
+                    </ul>
+                </li>
+                <li><a href="{% url 'logisticMediatheque:listJeux' %}">Jeux de plateau</a></li>
+                <li><a href="{% url 'logisticMediatheque:listMembres' %}">Membres</a></li>
+                <li><a href="{% url 'logisticMediatheque:historique' %}">Historique</a></li>
+            </ul>
+        </nav>
+        <div id="content">
+            <h1>Médiathèque du CEF</h1>
+            <div id="wrapContent">
+                {% block content %}{% endblock %}
+            </div>
+        </div>
+    </div>
 </body>
 </html>

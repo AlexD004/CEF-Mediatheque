@@ -8,26 +8,39 @@ def dashboard(request):
         "livres": Livres.objects.all(),
         "cds": CDs.objects.all(),
         "dvds": DVDs.objects.all(),
-        "jeux": Jeux.objects.all()
+        "jeux": Jeux.objects.all(),
+        "mediaType": "medias"
     }
     return render(request, "logisticMediatheque/lists.html", context)
 
 """ Lists by item type """
 
 def listLivres(request):
-    context = {"medias": Livres.objects.all()}
+    context = {
+        "livres": Livres.objects.all(),
+        "mediaType": "livres"
+    }
     return render(request, "logisticMediatheque/lists.html", context)
 
 def listCDs(request):
-    context = {"medias": CDs.objects.all()}
+    context = {
+        "cds": CDs.objects.all(),
+        "mediaType": "cds"
+    }
     return render(request, "logisticMediatheque/lists.html", context)
 
 def listDVDs(request):
-    context = {"medias": DVDs.objects.all()}
+    context = {
+        "dvds": DVDs.objects.all(),
+        "mediaType": "dvds"
+    }
     return render(request, "logisticMediatheque/lists.html", context)
 
 def listJeux(request):
-    context = {"jeux": Jeux.objects.all()}
+    context = {
+        "jeux": Jeux.objects.all(),
+        "mediaType": "jeux"
+    }
     return render(request, "logisticMediatheque/lists.html", context)
 
 """ Items details page """
