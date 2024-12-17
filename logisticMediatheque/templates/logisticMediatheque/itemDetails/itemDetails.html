@@ -1,0 +1,9 @@
+{% extends 'logisticMediatheque/base.html' %}
+
+{% block content %}
+
+    {% block infosDetails %}{% endblock %}
+    
+    <p><a href="{% url 'logisticMediatheque:dashboard' %}">Revenir à la liste des médias</a></p>
+
+{% endblock content %}

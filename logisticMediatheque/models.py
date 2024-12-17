@@ -26,6 +26,13 @@ class Medias (models.Model):
     title = models.CharField(max_length = 100, unique = True)
     issue = models.DateField()
     dateLoan = models.DateField(null = True, blank = True)
+    MEDIATYPES = [
+        ("LIVRE", "Livre"),
+        ("CD", "CD"),
+        ("DVD", "DVD"),
+        ("MEDIA", "Media")
+    ]
+    mediaType = models.CharField(choices=MEDIATYPES, max_length=5, default="MEDIA")
 
 class Livres (Medias):
     author = models.ForeignKey(Author, on_delete = models.DO_NOTHING, null = True)
@@ -46,6 +53,6 @@ class DVDs (Medias):
 class Jeux (models.Model):
     gameTitle = models.CharField(max_length = 100, unique = True)
     gameEditor = models.ForeignKey(GameEditor, on_delete = models.DO_NOTHING, null = True)
-    numPlayer = models.IntegerField()
+    numPlayer = models.CharField(max_length = 10)
     gameDuration = models.IntegerField()
     issue = models.DateField()

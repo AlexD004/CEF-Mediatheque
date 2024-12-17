@@ -1,0 +1,17 @@
+{% extends 'logisticMediatheque/base.html' %}
+
+{% block content %}
+    <h1>Bienvenue sur la médiathèque CEF !</h1>
+    {% for livre in livres %}
+        <p><a href="{% url 'logisticMediatheque:livreDetail' livre.id %}">{{livre.title}}</a></p>
+    {% endfor %} 
+    {% for cd in cds %}
+        <p><a href="{% url 'logisticMediatheque:cdDetail' cd.id %}">{{cd.title}}</a></p>
+    {% endfor %} 
+    {% for dvd in dvds %}
+        <p><a href="{% url 'logisticMediatheque:dvdDetail' dvd.id %}">{{dvd.title}}</a></p>
+    {% endfor %} 
+    {% for jeu in jeux %}
+        <p><a href="{% url 'logisticMediatheque:jeuDetail' jeu.id %}">{{jeu.gameTitle}}</a></p>
+    {% endfor %} 
+{% endblock content %}

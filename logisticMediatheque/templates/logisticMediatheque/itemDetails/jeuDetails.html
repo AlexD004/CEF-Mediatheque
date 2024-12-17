@@ -1,0 +1,13 @@
+{% extends 'logisticMediatheque/base.html' %}
+
+{% block content %}
+
+    <h1>{{ jeu.gameTitle }}</h1>
+    <p>Nombre de joueurs : {{ jeu.numPlayer }}</p>
+    <p>Durée : {{ jeu.gameDuration }}</p>
+    <p>Éditeur : {{ jeu.gameEditor.name }}</p>
+    <p>Sortie : {{ jeu.issue }}</p>
+    
+    <p><a href="{% url 'logisticMediatheque:dashboard' %}">Revenir à la liste des médias</a></p>
+
+{% endblock content %}
