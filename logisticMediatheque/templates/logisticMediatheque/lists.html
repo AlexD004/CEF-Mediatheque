@@ -1,0 +1,40 @@
+{% extends 'logisticMediatheque/base.html' %}
+
+{% block content %}
+
+    {% if mediaType == 'medias' %}
+        <h2>Tous les articles</h2>
+        {% for livre in livres %}
+            <p class="item"><a href="{% url 'logisticMediatheque:livreDetail' livre.id %}">{{livre.title}}</a></p>
+        {% endfor %} 
+        {% for cd in cds %}
+            <p class="item"><a href="{% url 'logisticMediatheque:cdDetail' cd.id %}">{{cd.title}}</a></p>
+        {% endfor %} 
+        {% for dvd in dvds %}
+            <p class="item"><a href="{% url 'logisticMediatheque:dvdDetail' dvd.id %}">{{dvd.title}}</a></p>
+        {% endfor %}
+        {% for jeu in jeux %}
+            <p class="item"><a href="{% url 'logisticMediatheque:jeuDetail' jeu.id %}">{{jeu.gameTitle}}</a></p>
+        {% endfor %} 
+    {% elif mediaType == 'livres' %}
+        <h2>Les livres</h2>
+        {% for livre in livres %}
+            <p class="item"><a href="{% url 'logisticMediatheque:livreDetail' livre.id %}">{{livre.title}}</a></p>
+        {% endfor %} 
+    {% elif mediaType == 'cds' %}
+        <h2>Les CDs</h2>
+        {% for cd in cds %}
+            <p class="item"><a href="{% url 'logisticMediatheque:cdDetail' cd.id %}">{{cd.title}}</a></p>
+        {% endfor %} 
+    {% elif mediaType == 'dvds' %} 
+        <h2>Les DVDs</h2>
+        {% for dvd in dvds %}
+            <p class="item"><a href="{% url 'logisticMediatheque:dvdDetail' dvd.id %}">{{dvd.title}}</a></p>
+        {% endfor %}
+    {% elif mediaType == 'medias' or mediaType == 'jeux' %}
+        <h2>Les Jeux</h2>
+        {% for jeu in jeux %}
+            <p class="item"><a href="{% url 'logisticMediatheque:jeuDetail' jeu.id %}">{{jeu.gameTitle}}</a></p>
+        {% endfor %} 
+    {% endif %}
+{% endblock content %}

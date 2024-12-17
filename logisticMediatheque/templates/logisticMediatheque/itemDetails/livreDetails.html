@@ -1,0 +1,10 @@
+{% extends 'logisticMediatheque/itemDetails/itemDetails.html' %}
+
+{% block infosDetails %}
+
+    <h2>{{ livre.title }}</h2>
+    <p><strong>Auteur :</strong> {{ livre.author.name }}</p>
+    <p><strong>Éditeur :</strong> {{ livre.editor.name }}</p>
+    <p><strong>Pages :</strong> {{ livre.numPages }}</p>
+
+{% endblock infosDetails %}

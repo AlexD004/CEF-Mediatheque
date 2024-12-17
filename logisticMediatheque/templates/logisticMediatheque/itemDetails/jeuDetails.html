@@ -1,0 +1,11 @@
+{% extends 'logisticMediatheque/itemDetails/itemDetails.html' %}
+
+{% block infosDetails %}
+
+    <h2>{{ jeu.gameTitle }}</h2>
+    <p><strong>Nombre de joueurs :</strong> {{ jeu.numPlayer }}</p>
+    <p><strong>Durée :</strong> {{ jeu.gameDuration }}</p>
+    <p><strong>Éditeur : </strong>{{ jeu.gameEditor.name }}</p>
+    <p><strong>Sortie : </strong>{{ jeu.issue }}</p>
+    
+{% endblock infosDetails %}
