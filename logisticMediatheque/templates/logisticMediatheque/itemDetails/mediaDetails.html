@@ -1,0 +1,24 @@
+{% extends 'logisticMediatheque/itemDetails/itemDetails.html' %}
+
+{% block infosDetails %}
+
+    {{ item.mediaType}}
+
+    <h2>{{ item.title }}</h2>
+
+    {% if item.mediaType == 'LIVRE' %}
+        <p><strong>Auteur :</strong> {{ item.author.name }}</p>
+        <p><strong>Éditeur :</strong> {{ item.editor.name }}</p>
+        <p><strong>Pages :</strong> {{ item.numPages }}</p>
+    {% elif item.mediaType == 'CD' %}
+        <p><strong>Artiste :</strong> {{ item.artist.name }}</p>
+        <p><strong>Label :</strong> {{ item.label.name }}</p>
+        <p><strong>Nombre de morceaux :</strong> {{ item.numPist }}</p>
+     {% elif item.mediaType == 'DVD' %}
+        <p><strong>Réalisateur : </strong>{{ item.director.name }}</p>
+        <p><strong>Durée : </strong>{{ item.filmDuration }}</p>
+    {% else %}
+        <p>Nous n'avons pas plus d'informations sur ce média...</p>
+    {% endif %}
+
+{% endblock infosDetails %}
