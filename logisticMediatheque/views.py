@@ -4,58 +4,48 @@ from .models import Medias, Livres, CDs, DVDs, Jeux
 """ Connected home page """
 
 def dashboard(request):
-    context = {
-        "livres": Livres.objects.all(),
-        "cds": CDs.objects.all(),
-        "dvds": DVDs.objects.all(),
-        "jeux": Jeux.objects.all(),
-        "mediaType": "medias"
-    }
+    context = {"items": Medias.objects.all() }
     return render(request, "logisticMediatheque/lists.html", context)
 
 """ Lists by item type """
 
-def listLivres(request):
-    context = {
-        "livres": Livres.objects.all(),
-        "mediaType": "livres"
-    }
-    return render(request, "logisticMediatheque/lists.html", context)
-
-def listCDs(request):
-    context = {
-        "cds": CDs.objects.all(),
-        "mediaType": "cds"
-    }
-    return render(request, "logisticMediatheque/lists.html", context)
-
-def listDVDs(request):
-    context = {
-        "dvds": DVDs.objects.all(),
-        "mediaType": "dvds"
-    }
-    return render(request, "logisticMediatheque/lists.html", context)
-
-def listJeux(request):
-    context = {
-        "jeux": Jeux.objects.all(),
-        "mediaType": "jeux"
-    }
+def listMedias(request, sortBy):
+    if sortBy == 'livre':
+        context = {
+            "items": Livres.objects.all(),
+            "type":"medias"
+        }
+    elif sortBy == 'cd':
+        context = {
+            "items": CDs.objects.all(),
+            "type":"medias"
+        }
+    elif sortBy == 'dvd':
+        context = {
+            "items": DVDs.objects.all(),
+            "type":"medias"
+        }
+    elif sortBy == 'jeu':
+        context = {
+            "items": Jeux.objects.all(),
+            "type":"jeux"
+        }
     return render(request, "logisticMediatheque/lists.html", context)
 
 """ Items details page """
 
-def livreDetail(request, livre_id):
-    context = { "livre": get_object_or_404( Livres, pk = livre_id )}
-    return render(request, "logisticMediatheque/itemDetails/livreDetails.html", context)
+def mediaDetail(request, item_type, item_id ):
 
-def cdDetail(request, cd_id):
-    context = { "cd": get_object_or_404( CDs, pk = cd_id )}
-    return render(request, "logisticMediatheque/itemDetails/cdDetails.html", context)
+    if item_type == 'LIVRE':
+        context = { "item": get_object_or_404( Livres, pk = item_id ) }
+    elif item_type == 'CD':
+        context = { "item": get_object_or_404( CDs, pk = item_id ) }
+    elif item_type == 'DVD':
+        context = { "item": get_object_or_404( DVDs, pk = item_id ) }
+    else:
+        context = { "item": get_object_or_404( Medias, pk = item_id ) }
 
-def dvdDetail(request, dvd_id):
-    context = { "dvd": get_object_or_404( DVDs, pk = dvd_id )}
-    return render(request, "logisticMediatheque/itemDetails/dvdDetails.html", context)
+    return render(request, "logisticMediatheque/itemDetails/mediaDetails.html", context)
 
 def jeuDetail(request, jeu_id):
     context = { "jeu": get_object_or_404( Jeux, pk = jeu_id )}
