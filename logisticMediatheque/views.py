@@ -5,32 +5,20 @@ from .models import Medias, Livres, CDs, DVDs, Jeux
 
 def dashboard(request):
     context = {"items": Medias.objects.all() }
-    return render(request, "logisticMediatheque/lists.html", context)
+    return render(request, "logisticMediatheque/listMedias.html", context)
 
 """ Lists by item type """
 
-def listMedias(request, sortBy):
-    if sortBy == 'livre':
-        context = {
-            "items": Livres.objects.all(),
-            "type":"medias"
-        }
-    elif sortBy == 'cd':
-        context = {
-            "items": CDs.objects.all(),
-            "type":"medias"
-        }
-    elif sortBy == 'dvd':
-        context = {
-            "items": DVDs.objects.all(),
-            "type":"medias"
-        }
-    elif sortBy == 'jeu':
-        context = {
-            "items": Jeux.objects.all(),
-            "type":"jeux"
-        }
-    return render(request, "logisticMediatheque/lists.html", context)
+def listMedias(request, item_type):
+    context = {
+        "items": Medias.objects.all().filter( mediaType = item_type),
+        "type": item_type
+    }
+    return render(request, "logisticMediatheque/listMedias.html", context)
+
+def listJeux(request):
+    context = {"items": Jeux.objects.all()}
+    return render(request, "logisticMediatheque/listJeux.html", context)
 
 """ Items details page """
 

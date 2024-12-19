@@ -1,0 +1,10 @@
+{% extends 'logisticMediatheque/base.html' %}
+
+{% block content %}
+
+    <h2>Nos médias {{type}}</h2>
+    {% for item in items %}
+        <p class="item"><a href="{% url 'logisticMediatheque:mediaDetail' item.mediaType item.id %}">{{item.title}}</a></p>
+    {% endfor %}
+
+{% endblock content %}
