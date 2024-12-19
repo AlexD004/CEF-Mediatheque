@@ -1,0 +1,22 @@
+<nav id="itemNav">
+    <ul>
+        {% include "logisticMediatheque/menus/menuAuth.html" %}
+        <li><a href="{% url 'logisticMediatheque:dashboard' %}">Médias</a></li>
+        <li class="submenu">
+            <ul>
+                <li>
+                    <a href="{% url 'logisticMediatheque:listMedias' 'livre' %}">Livres</a>
+                </li>
+                <li>
+                    <a href="{% url 'logisticMediatheque:listMedias' 'cd' %}">CDs</a>
+                </li>
+                <li>
+                    <a href="{% url 'logisticMediatheque:listMedias' 'dvd' %}">DVDs</a>
+                </li>
+            </ul>
+        </li>
+        <li class="flexItemNav">
+            <a href="{% url 'logisticMediatheque:listJeux' %}">Jeux</a>
+        </li>
+    </ul>
+</nav>
