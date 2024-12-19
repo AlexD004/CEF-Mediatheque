@@ -15,12 +15,12 @@
                 <li><a href="{% url 'logisticMediatheque:dashboard' %}">Médias</a></li>
                 <li class="submenu">
                     <ul>
-                        <li><a href="{% url 'logisticMediatheque:listMedias' 'livre' %}">Livres</a></li>
-                        <li><a href="{% url 'logisticMediatheque:listMedias' 'cd' %}">CDs</a></li>
-                        <li><a href="{% url 'logisticMediatheque:listMedias' 'dvd' %}">DVDs</a></li>
+                        <li><a href="{% url 'logisticMediatheque:listMedias' 'LIVRE' %}">Livres</a></li>
+                        <li><a href="{% url 'logisticMediatheque:listMedias' 'CD' %}">CDs</a></li>
+                        <li><a href="{% url 'logisticMediatheque:listMedias' 'DVD' %}">DVDs</a></li>
                     </ul>
                 </li>
-                <li><a href="{% url 'logisticMediatheque:listMedias' 'jeu' %}">Jeux de plateau</a></li>
+                <li><a href="{% url 'logisticMediatheque:listJeux' %}">Jeux de plateau</a></li>
                 <li><a href="{% url 'logisticMediatheque:listMembres' %}">Membres</a></li>
                 <li><a href="{% url 'logisticMediatheque:historique' %}">Historique</a></li>
             </ul>
