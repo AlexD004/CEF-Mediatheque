@@ -4,7 +4,13 @@
 
     <h2>Nos jeux</h2>
     {% for item in items %}
-        <p class="item"><a href="{% url 'logisticMediatheque:jeuDetail' item.id %}">{{item.gameTitle}}</a></p>
+        <div class="item">
+            <a href="{% url 'logisticMediatheque:jeuDetail' item.id %}">{{item.gameTitle}}</a>
+            <div class="itemActions">
+                <a href="{% url 'logisticMediatheque:updateJeu' item.id %}">[Modifier]</a>
+                <a href="{% url 'logisticMediatheque:removeJeu' item.id %}">[X]</a>
+            </div>
+        </div>
     {% endfor %}
 
 {% endblock content %}

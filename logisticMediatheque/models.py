@@ -27,12 +27,11 @@ class Medias (models.Model):
     issue = models.DateField()
     dateLoan = models.DateField(null = True, blank = True)
     MEDIATYPES = [
-        ("LIVRE", "Livre"),
-        ("CD", "CD"),
-        ("DVD", "DVD"),
-        ("MEDIA", "Media")
+        ("livre", "Livre"),
+        ("cd", "CD"),
+        ("dvd", "DVD")
     ]
-    mediaType = models.CharField(choices=MEDIATYPES, max_length=5, default="MEDIA")
+    mediaType = models.CharField(choices=MEDIATYPES, max_length=5, default="livre")
 
 class Livres (Medias):
     author = models.ForeignKey(Author, on_delete = models.DO_NOTHING, null = True)

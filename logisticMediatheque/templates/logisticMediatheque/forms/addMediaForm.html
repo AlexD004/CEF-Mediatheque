@@ -1,0 +1,19 @@
+{% extends 'logisticMediatheque/base.html' %}
+
+{% block content %}
+
+    {% if mediaType == 'livre' %}
+        <h2>{{actionType}} d'un Livre</h2>
+    {% elif mediaType == 'cd' %}
+        <h2>{{actionType}} d'un CD</h2>
+    {% elif mediaType == 'dvd' %}
+        <h2>{{actionType}} d'un DVD</h2>
+    {% else %}
+        <h2>{{actionType}} d'un média</h2>
+    {% endif %}
+    <form method="post">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="Ajouter">
+    </form>
+{% endblock content %}

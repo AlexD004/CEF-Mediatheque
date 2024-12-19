@@ -4,7 +4,13 @@
 
     <h2>Nos médias {{type}}</h2>
     {% for item in items %}
-        <p class="item"><a href="{% url 'logisticMediatheque:mediaDetail' item.mediaType item.id %}">{{item.title}}</a></p>
+        <div class="item">
+            <a href="{% url 'logisticMediatheque:mediaDetail' item.mediaType item.id %}">{{item.title}}</a>
+            <div class="itemActions">
+                <a href="{% url 'logisticMediatheque:updateMedia' item.mediaType item.id %}">[Modifier]</a>
+                <a href="{% url 'logisticMediatheque:removeMedia' item.id %}">[X]</a>
+            </div>
+        </div>
     {% endfor %}
 
 {% endblock content %}
