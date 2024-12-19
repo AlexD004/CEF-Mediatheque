@@ -4,15 +4,15 @@
 
     <h2>{{ item.title }}</h2>
 
-    {% if item.mediaType == 'LIVRE' %}
+    {% if item.mediaType == 'livre' %}
         <p><strong>Auteur :</strong> {{ item.author.name }}</p>
         <p><strong>Éditeur :</strong> {{ item.editor.name }}</p>
         <p><strong>Pages :</strong> {{ item.numPages }}</p>
-    {% elif item.mediaType == 'CD' %}
+    {% elif item.mediaType == 'cd' %}
         <p><strong>Artiste :</strong> {{ item.artist.name }}</p>
         <p><strong>Label :</strong> {{ item.label.name }}</p>
         <p><strong>Nombre de morceaux :</strong> {{ item.numPist }}</p>
-     {% elif item.mediaType == 'DVD' %}
+     {% elif item.mediaType == 'dvd' %}
         <p><strong>Réalisateur : </strong>{{ item.director.name }}</p>
         <p><strong>Durée : </strong>{{ item.filmDuration }}</p>
     {% else %}

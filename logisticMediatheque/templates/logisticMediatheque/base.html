@@ -15,12 +15,24 @@
                 <li><a href="{% url 'logisticMediatheque:dashboard' %}">Médias</a></li>
                 <li class="submenu">
                     <ul>
-                        <li><a href="{% url 'logisticMediatheque:listMedias' 'LIVRE' %}">Livres</a></li>
-                        <li><a href="{% url 'logisticMediatheque:listMedias' 'CD' %}">CDs</a></li>
-                        <li><a href="{% url 'logisticMediatheque:listMedias' 'DVD' %}">DVDs</a></li>
+                        <li>
+                            <a href="{% url 'logisticMediatheque:listMedias' 'livre' %}">Livres</a>
+                            <a href="{% url 'logisticMediatheque:addMedia' 'livre' %}">[+]</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'logisticMediatheque:listMedias' 'cd' %}">CDs</a>
+                            <a href="{% url 'logisticMediatheque:addMedia' 'cd' %}">[+]</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'logisticMediatheque:listMedias' 'dvd' %}">DVDs</a>
+                            <a href="{% url 'logisticMediatheque:addMedia' 'dvd' %}">[+]</a>
+                        </li>
                     </ul>
                 </li>
-                <li><a href="{% url 'logisticMediatheque:listJeux' %}">Jeux de plateau</a></li>
+                <li class="flexItemNav">
+                    <a href="{% url 'logisticMediatheque:listJeux' %}">Jeux</a>
+                    <a href="{% url 'logisticMediatheque:addJeu' %}">[+]</a>
+                </li>
                 <li><a href="{% url 'logisticMediatheque:listMembres' %}">Membres</a></li>
                 <li><a href="{% url 'logisticMediatheque:historique' %}">Historique</a></li>
             </ul>
