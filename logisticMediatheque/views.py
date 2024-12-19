@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Medias, Livres, CDs, DVDs, Jeux
-from .forms import addLivreForm, addCDForm, addDVDForm, addJeuxForm
+from .models import Medias, Livres, CDs, DVDs, Jeux, Membres
+from .forms import addLivreForm, addCDForm, addDVDForm, addJeuxForm, addMembreForm
 
 
 """ 
@@ -41,7 +41,10 @@ def jeuDetail(request, jeu_id):
 """ Other pages """
 
 def listMembres(request):
-    return render(request, "logisticMediatheque/listMembers.html", {"membres": "Liste des membres"})
+    return render(request, "logisticMediatheque/listMembres.html", {"membres": Membres.objects.all()})
+
+def membreDetail(request, membre_id):
+    return render(request, "logisticMediatheque/itemDetails/membreDetails.html", { "membre": get_object_or_404( Membres, pk = membre_id )})
 
 def historique(request):
     return render(request, "logisticMediatheque/historique.html", {"historique": "Liste des logs"})
@@ -62,6 +65,12 @@ def removeJeu(request, item_id):
     jeu.delete()
     medias = Medias.objects.all()
     return render(request, 'logisticMediatheque/listMedias.html', {'items': medias})
+
+def removeMembre(request, item_id):
+    membre = Membres.objects.get( pk = item_id )
+    membre.delete()
+    membres = Membres.objects.all()
+    return render(request, 'logisticMediatheque/listMembres.html', {'membres': membres})
 
 """
 ADD
@@ -138,6 +147,21 @@ def addJeu(request):
     else:
         form = addJeuxForm()
         return render(request, 'logisticMediatheque/forms/addJeuxForm.html',{'form': form, 'actionType': action_type})
+    
+
+def addMembre(request):
+    action_type = 'Ajout'
+
+    if request.method == 'POST':
+            form = addMembreForm(request.POST)
+
+            if form.is_valid():
+                form.save()
+                membres = Membres.objects.all()
+                return render(request, 'logisticMediatheque/listMembres.html',{'membres': membres})
+    else:
+        form = addMembreForm()
+        return render(request, 'logisticMediatheque/forms/addMembreForm.html',{'form': form, 'actionType': action_type})
 
 """
 UPDATE
@@ -201,3 +225,19 @@ def updateJeu(request, item_id):
     else:
         form = addJeuxForm(instance=jeu)
         return render(request, 'logisticMediatheque/forms/addJeuxForm.html',{'form': form, 'actionType': action_type})
+    
+
+def updateMembre(request, item_id):
+    action_type = 'Modification'
+    jeu = Membres.objects.get( pk = item_id )
+
+    if request.method == 'POST':
+            form = addMembreForm(request.POST, instance=jeu)
+
+            if form.is_valid():
+                form.save()
+                membres = Membres.objects.all()
+                return render(request, 'logisticMediatheque/listMembres.html',{'membres': membres})
+    else:
+        form = addMembreForm(instance=jeu)
+        return render(request, 'logisticMediatheque/forms/addMembreForm.html',{'form': form, 'actionType': action_type})

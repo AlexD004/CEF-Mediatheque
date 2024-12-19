@@ -15,14 +15,17 @@
                 <li>
                     <a href="{% url 'logisticMediatheque:listMedias' 'dvd' %}">DVDs</a>
                     <a href="{% url 'logisticMediatheque:addMedia' 'dvd' %}">[+]</a>
-                </li>
+                </li> 
             </ul>
         </li>
         <li class="flexItemNav">
             <a href="{% url 'logisticMediatheque:listJeux' %}">Jeux</a>
             <a href="{% url 'logisticMediatheque:addJeu' %}">[+]</a>
         </li>
-        <li><a href="{% url 'logisticMediatheque:listMembres' %}">Membres</a></li>
+        <li class="flexItemNav">
+            <a href="{% url 'logisticMediatheque:listMembres' %}">Membres</a>
+            <a href="{% url 'logisticMediatheque:addMembre' %}">[+]</a>
+        </li>
         <li><a href="{% url 'logisticMediatheque:historique' %}">Historique</a></li>
     </ul>
 </nav>

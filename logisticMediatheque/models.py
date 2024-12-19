@@ -1,5 +1,15 @@
 from django.db import models
 
+""" Class for Members """
+
+class Membres (models.Model):
+    firstname = models.CharField(max_length=100)
+    lastname = models.CharField(max_length=100)
+    email = models.EmailField()
+    canLoan = models.BooleanField(default=True)
+    numLoan = models.IntegerField(default=0)
+
+
 """ Class for Medias Details and Informations """
 
 class Author (models.Model):
@@ -25,6 +35,7 @@ class GameEditor (models.Model):
 class Medias (models.Model):
     title = models.CharField(max_length = 100, unique = True)
     issue = models.DateField()
+    borrower = models.ForeignKey(Membres, on_delete= models.DO_NOTHING, null=True)
     dateLoan = models.DateField(null = True, blank = True)
     MEDIATYPES = [
         ("livre", "Livre"),
