@@ -1,0 +1,14 @@
+{% extends 'logisticMediatheque/base.html' %}
+
+{% block content %}
+    <h2>Membres emprunteurs</h2>
+    {% for membre in membres %}
+    <div class="item">
+        <a href="{% url 'logisticMediatheque:membreDetail' membre.id %}">{{membre.firstname}} {{membre.lastname}}</a>
+        <div class="itemActions">
+            <a href="{% url 'logisticMediatheque:updateMembre' membre.id %}">[Modifier]</a>
+            <a href="{% url 'logisticMediatheque:removeMembre' membre.id %}">[X]</a>
+        </div>
+    </div>
+    {% endfor %}
+{% endblock content %}

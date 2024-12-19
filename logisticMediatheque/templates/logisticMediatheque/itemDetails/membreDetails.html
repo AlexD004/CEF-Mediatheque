@@ -1,0 +1,16 @@
+{% extends 'logisticMediatheque/base.html' %}
+
+{% block content %}
+
+    <h2>{{ membre.firstname }} {{ membre.lastname }}</h2>
+
+    <p>Emprunt(s) en cours : {{ membre.numLoan }}</p>
+    {% if membre.canLoan == True %}
+        <p>Autorisé à emprunter</p>
+    {% else %}
+        <p>Ne peut plus emprunter !</p>
+    {% endif %}
+    
+    <p class="returnLink"><a href="{% url 'logisticMediatheque:listMembres' %}">Revenir à la liste des médias</a></p>
+
+{% endblock content %}
