@@ -76,7 +76,12 @@ def addMedia(request, media_type):
             form = addLivreForm(request.POST)
 
             if form.is_valid():
-                form.save()
+                newLivre = Livres()
+                newLivre.title = form.cleaned_data['title']
+                newLivre.mediaType = media_type
+                newLivre.issue = form.cleaned_data['issue']
+                newLivre.numPages = form.cleaned_data['numPages']
+                newLivre.save()
                 medias = Medias.objects.all()
                 return render(request, 'logisticMediatheque/listMedias.html',{'items': medias})
         else:
@@ -89,7 +94,12 @@ def addMedia(request, media_type):
             form = addCDForm(request.POST)
 
             if form.is_valid():
-                form.save()
+                newCD = CDs()
+                newCD.title = form.cleaned_data['title']
+                newCD.mediaType = media_type
+                newCD.issue = form.cleaned_data['issue']
+                newCD.numPist = form.cleaned_data['numPist']
+                newCD.save()
                 medias = Medias.objects.all()
                 return render(request, 'logisticMediatheque/listMedias.html',{'items': medias})
         else:
@@ -102,7 +112,12 @@ def addMedia(request, media_type):
             form = addDVDForm(request.POST)
 
             if form.is_valid():
-                form.save()
+                newDVD = DVDs()
+                newDVD.title = form.cleaned_data['title']
+                newDVD.mediaType = media_type
+                newDVD.issue = form.cleaned_data['issue']
+                newDVD.filmDuration = form.cleaned_data['filmDuration']
+                newDVD.save()
                 medias = Medias.objects.all()
                 return render(request, 'logisticMediatheque/listMedias.html',{'items': medias})
         else:

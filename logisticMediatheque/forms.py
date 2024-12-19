@@ -4,22 +4,22 @@ from .models import Livres, CDs, DVDs, Jeux
 class addLivreForm(forms.ModelForm):
     class Meta:
         model = Livres
-        fields = ['title','mediaType','issue','numPages']
-        labels = {'title':'Titre','mediaType':'Type de média','issue':'Date de sortie','numPages':'Nombre de pages'} 
+        fields = ['title','issue','numPages']
+        labels = {'title':'Titre','issue':'Date de sortie','numPages':'Nombre de pages'} 
 
 
 class addCDForm(forms.ModelForm):
     class Meta:
         model = CDs
-        fields = ['title','mediaType','issue','numPist']
-        labels = {'title':'Titre','mediaType':'Type de média','issue':'Date de sortie','numPist':'Nombre de morceaux'} 
+        fields = ['title','issue','numPist']
+        labels = {'title':'Titre','issue':'Date de sortie','numPist':'Nombre de morceaux'} 
 
 
 class addDVDForm(forms.ModelForm):
     class Meta:
         model = DVDs
-        fields = ['title','mediaType','issue','filmDuration']
-        labels = {'title':'Titre','mediaType':'Type de média','issue':'Date de sortie','filmDuration':'Durée'} 
+        fields = ['title','issue','filmDuration']
+        labels = {'title':'Titre','issue':'Date de sortie','filmDuration':'Durée'} 
         
 
 class addJeuxForm(forms.ModelForm):
