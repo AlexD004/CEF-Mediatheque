@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'logisticMediatheque'
+    'logisticMediatheque',
+    'manageAccounts'
 ]
 
 MIDDLEWARE = [

@@ -1,0 +1,8 @@
+<li class="auth">
+    {% if user.is_authenticated %}
+        <p>Connecté : {{user.username}}</p>
+        <p><a href="{% url 'manage:logout' %}">Déconnexion</a></p>
+    {% else %}
+        <p><a href="{% url 'manage:login' %}">Connexion</a></p>
+    {% endif %}
+</li>

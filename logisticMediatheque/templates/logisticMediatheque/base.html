@@ -10,33 +10,11 @@
 </head>
 <body>
     <div class="flexWrap">
-        <nav id="itemNav">
-            <ul>
-                <li><a href="{% url 'logisticMediatheque:dashboard' %}">Médias</a></li>
-                <li class="submenu">
-                    <ul>
-                        <li>
-                            <a href="{% url 'logisticMediatheque:listMedias' 'livre' %}">Livres</a>
-                            <a href="{% url 'logisticMediatheque:addMedia' 'livre' %}">[+]</a>
-                        </li>
-                        <li>
-                            <a href="{% url 'logisticMediatheque:listMedias' 'cd' %}">CDs</a>
-                            <a href="{% url 'logisticMediatheque:addMedia' 'cd' %}">[+]</a>
-                        </li>
-                        <li>
-                            <a href="{% url 'logisticMediatheque:listMedias' 'dvd' %}">DVDs</a>
-                            <a href="{% url 'logisticMediatheque:addMedia' 'dvd' %}">[+]</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="flexItemNav">
-                    <a href="{% url 'logisticMediatheque:listJeux' %}">Jeux</a>
-                    <a href="{% url 'logisticMediatheque:addJeu' %}">[+]</a>
-                </li>
-                <li><a href="{% url 'logisticMediatheque:listMembres' %}">Membres</a></li>
-                <li><a href="{% url 'logisticMediatheque:historique' %}">Historique</a></li>
-            </ul>
-        </nav>
+        {% if user.is_authenticated %}
+            {% include "logisticMediatheque/menus/menuManage.html" %}
+        {% else %}
+            {% include "logisticMediatheque/menus/menuMembre.html" %}
+        {% endif %}
         <div id="content">
             <h1>Médiathèque du CEF</h1>
             <div id="wrapContent">

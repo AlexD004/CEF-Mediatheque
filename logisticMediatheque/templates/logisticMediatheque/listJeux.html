@@ -6,10 +6,13 @@
     {% for item in items %}
         <div class="item">
             <a href="{% url 'logisticMediatheque:jeuDetail' item.id %}">{{item.gameTitle}}</a>
-            <div class="itemActions">
-                <a href="{% url 'logisticMediatheque:updateJeu' item.id %}">[Modifier]</a>
-                <a href="{% url 'logisticMediatheque:removeJeu' item.id %}">[X]</a>
-            </div>
+
+            {% if user.is_authenticated %}
+                <div class="itemActions">
+                    <a href="{% url 'logisticMediatheque:updateJeu' item.id %}">[Modifier]</a>
+                    <a href="{% url 'logisticMediatheque:removeJeu' item.id %}">[X]</a>
+                </div>
+            {% endif %}
         </div>
     {% endfor %}
 
