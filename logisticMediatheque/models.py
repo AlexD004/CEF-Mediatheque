@@ -13,22 +13,22 @@ class Membres (models.Model):
 """ Class for Medias Details and Informations """
 
 class Author (models.Model):
-    name = models.CharField(max_length = 100, default = "Inconnu")
+    name = models.CharField(max_length = 100, default = "Inconnu", unique = True)
 
 class Editor (models.Model):
-    name = models.CharField(max_length = 100, default = "Inconnu")
+    name = models.CharField(max_length = 100, default = "Inconnu", unique = True)
 
 class Label (models.Model):
-    name = models.CharField(max_length = 100, default = "Inconnu")
+    name = models.CharField(max_length = 100, default = "Inconnu", unique = True)
 
 class GroupOrSinger (models.Model):
-    name = models.CharField(max_length = 100, default = "Inconnu")
+    name = models.CharField(max_length = 100, default = "Inconnu", unique = True)
 
 class Director (models.Model):
-    name = models.CharField(max_length = 100, default = "Inconnu")
+    name = models.CharField(max_length = 100, default = "Inconnu", unique = True)
 
 class GameEditor (models.Model):
-    name = models.CharField(max_length = 100, default = "Inconnu")
+    name = models.CharField(max_length = 100, default = "Inconnu", unique = True)
 
 """ Class for Medias """
 

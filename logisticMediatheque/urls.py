@@ -6,6 +6,9 @@ app_name = "logisticMediatheque"
 urlpatterns = [
     path('', views.dashboard, name = 'dashboard'),
 
+    path('emprunt', views.addLoan, name = 'addLoan'),
+    path('supprimer-emprunt/<int:item_id>/<int:membre_id>', views.removeLoan, name = 'removeLoan'),
+
     path('nouveau/membre', views.addMembre, name = 'addMembre'),
     path('nouveau/jeu', views.addJeu, name = 'addJeu'),
     path('nouveau/<slug:media_type>', views.addMedia, name = 'addMedia'),

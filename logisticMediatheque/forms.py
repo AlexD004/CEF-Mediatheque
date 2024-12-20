@@ -1,8 +1,8 @@
 from django import forms
-from .models import Livres, CDs, DVDs, Jeux, Membres, Author, Editor, Label, GroupOrSinger, Director
+from .models import Livres, CDs, DVDs, Jeux, Membres, Author, Editor, Label, GroupOrSinger, Director, GameEditor, Medias
 
 class addLivreForm(forms.ModelForm):
-    author = forms.ModelChoiceField(queryset=Author.objects.all(), label = "Auteur")
+    author = forms.ModelChoiceField(queryset=Author.objects.all(), to_field_name="name", label = "Auteur")
     editor = forms.ModelChoiceField(queryset=Editor.objects.all(), label = "Éditeur")
     class Meta:
         model = Livres
@@ -28,9 +28,10 @@ class addDVDForm(forms.ModelForm):
         
 
 class addJeuxForm(forms.ModelForm):
+    gameEditor = forms.ModelChoiceField(queryset=GameEditor.objects.all(), label = "Éditeur")
     class Meta:
         model = Jeux
-        fields = ['gameTitle','issue','numPlayer','gameDuration']
+        fields = ['gameTitle','gameEditor','issue','numPlayer','gameDuration']
         labels = {'title':'Titre','issue':'Date de sortie','numPlayer':'Nombre de joueur','gameDuration':'Temps de jeu'} 
 
 class addMembreForm(forms.ModelForm):
@@ -38,3 +39,7 @@ class addMembreForm(forms.ModelForm):
         model = Membres
         fields = ['firstname','lastname','email']
         labels = {'firstname':'Prénom','lastname':'Nom','email':'Adresse e-mail'} 
+
+class addLoanForm(forms.Form): 
+    membre = forms.ModelChoiceField(queryset=Membres.objects.all().filter(numLoan__lt=3, canLoan=True), label = "Membre emprunteur")
+    media = forms.ModelChoiceField(queryset=Medias.objects.all().filter(dateLoan__isnull=True), label = "Média")

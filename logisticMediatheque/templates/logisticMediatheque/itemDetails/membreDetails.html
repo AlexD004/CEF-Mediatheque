@@ -4,12 +4,31 @@
 
     <h2>{{ membre.firstname }} {{ membre.lastname }}</h2>
 
-    <p>Emprunt(s) en cours : {{ membre.numLoan }}</p>
-    {% if membre.canLoan == True %}
-        <p>Autorisé à emprunter</p>
-    {% else %}
-        <p>Ne peut plus emprunter !</p>
-    {% endif %}
+    <div class="membreInfos">
+        <p>Emprunt(s) en cours : {{ membre.numLoan }}</p>
+        {% if membre.canLoan == True %}
+            <p>Autorisé à emprunter</p>
+        {% else %}
+            <p>Ne peut plus emprunter !</p>
+        {% endif %}
+    </div>
+
+    <div class="membreLoans">
+        <h3>Médias empruntés</h3>
+        {% for mediaLoan in mediaLoans %}
+            <div class="item">
+                <div class="mediaInfos">
+                    <a href="{% url 'logisticMediatheque:mediaDetail' mediaLoan.mediaType mediaLoan.id %}">{{mediaLoan.title}}</a>   -   {{mediaLoan.dateLoan}}
+                </div>
+
+                <div class="itemActions">
+                    <a href="{% url 'logisticMediatheque:removeLoan' mediaLoan.id membre.id %}">[X]</a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+
     
     <p class="returnLink"><a href="{% url 'logisticMediatheque:listMembres' %}">Revenir à la liste des médias</a></p>
 

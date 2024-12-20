@@ -1,6 +1,7 @@
 <nav id="itemNav">
     <ul>
         {% include "logisticMediatheque/menus/menuAuth.html" %}
+        <li><a href="{% url 'logisticMediatheque:addLoan' %}">Créer un emprunt</a></li>
         <li><a href="{% url 'logisticMediatheque:dashboard' %}">Médias</a></li>
         <li class="submenu">
             <ul>
