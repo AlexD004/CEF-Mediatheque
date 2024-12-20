@@ -5,6 +5,7 @@
     <h2>{{ membre.firstname }} {{ membre.lastname }}</h2>
 
     <div class="membreInfos">
+        <p>{{ membre.email }}</p>
         <p>Emprunt(s) en cours : {{ membre.numLoan }}</p>
         {% if membre.canLoan == True %}
             <p>Autorisé à emprunter</p>
@@ -18,7 +19,8 @@
         {% for mediaLoan in mediaLoans %}
             <div class="item">
                 <div class="mediaInfos">
-                    <a href="{% url 'logisticMediatheque:mediaDetail' mediaLoan.mediaType mediaLoan.id %}">{{mediaLoan.title}}</a>   -   {{mediaLoan.dateLoan}}
+                    <a href="{% url 'logisticMediatheque:mediaDetail' mediaLoan.mediaType mediaLoan.id %}">{{mediaLoan.title}}</a><br/>
+                    <p><small>{{mediaLoan.dateLoan}} - Emprunté depuis XX jours</small></p>
                 </div>
 
                 <div class="itemActions">
@@ -30,6 +32,6 @@
 
 
     
-    <p class="returnLink"><a href="{% url 'logisticMediatheque:listMembres' %}">Revenir à la liste des médias</a></p>
+    <p class="returnLink"><a href="{% url 'logisticMediatheque:listMembres' %}">Revenir à la liste des membres</a></p>
 
 {% endblock content %}
