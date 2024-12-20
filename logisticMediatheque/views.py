@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Medias, Livres, CDs, DVDs, Jeux, Membres
-from .forms import addLivreForm, addCDForm, addDVDForm, addJeuxForm, addMembreForm
-
+from .forms import addLivreForm, addCDForm, addDVDForm, addJeuxForm, addMembreForm, addLoanForm
+import datetime
 
 """ 
 READ
@@ -44,7 +44,15 @@ def listMembres(request):
     return render(request, "logisticMediatheque/listMembres.html", {"membres": Membres.objects.all()})
 
 def membreDetail(request, membre_id):
-    return render(request, "logisticMediatheque/itemDetails/membreDetails.html", { "membre": get_object_or_404( Membres, pk = membre_id )})
+    mediaLoans = Medias.objects.all().filter(borrower = membre_id)
+    return render(
+        request,
+        "logisticMediatheque/itemDetails/membreDetails.html",
+        { 
+            "membre": get_object_or_404( Membres, pk = membre_id ),
+            "mediaLoans": mediaLoans
+        }
+    )
 
 def historique(request):
     return render(request, "logisticMediatheque/historique.html", {"historique": "Liste des logs"})
@@ -88,6 +96,8 @@ def addMedia(request, media_type):
                 newLivre = Livres()
                 newLivre.title = form.cleaned_data['title']
                 newLivre.mediaType = media_type
+                newLivre.author = form.cleaned_data['author']
+                newLivre.editor = form.cleaned_data['editor']
                 newLivre.issue = form.cleaned_data['issue']
                 newLivre.numPages = form.cleaned_data['numPages']
                 newLivre.save()
@@ -106,6 +116,8 @@ def addMedia(request, media_type):
                 newCD = CDs()
                 newCD.title = form.cleaned_data['title']
                 newCD.mediaType = media_type
+                newCD.label = form.cleaned_data['label']
+                newCD.artist = form.cleaned_data['artist']
                 newCD.issue = form.cleaned_data['issue']
                 newCD.numPist = form.cleaned_data['numPist']
                 newCD.save()
@@ -124,6 +136,7 @@ def addMedia(request, media_type):
                 newDVD = DVDs()
                 newDVD.title = form.cleaned_data['title']
                 newDVD.mediaType = media_type
+                newDVD.director = form.cleaned_data['director']
                 newDVD.issue = form.cleaned_data['issue']
                 newDVD.filmDuration = form.cleaned_data['filmDuration']
                 newDVD.save()
@@ -241,3 +254,62 @@ def updateMembre(request, item_id):
     else:
         form = addMembreForm(instance=jeu)
         return render(request, 'logisticMediatheque/forms/addMembreForm.html',{'form': form, 'actionType': action_type})
+    
+
+"""
+METHODS
+FOR LOAN
+"""
+
+def addLoan(request):
+    if request.method == 'POST':
+            form = addLoanForm(request.POST)
+
+            if form.is_valid():
+                membre = form.cleaned_data['membre']
+                media = form.cleaned_data['media']
+
+                membreLoaning = Membres.objects.get( pk = membre.id )
+                mediaLoaned = Medias.objects.get( pk = media.id )
+
+                membreLoaning.numLoan += 1 
+                mediaLoaned.borrower = membre
+                mediaLoaned.dateLoan = datetime.datetime.now()
+
+                membreLoaning.save()
+                mediaLoaned.save()
+
+                mediaLoans = Medias.objects.all().filter(borrower = membre.id)
+
+                return render(
+                    request,
+                    "logisticMediatheque/itemDetails/membreDetails.html",
+                    { 
+                        "membre": get_object_or_404( Membres, pk = membre.id ),
+                        'mediaLoans': mediaLoans
+                    }
+                )
+    else:
+        form = addLoanForm()
+        return render(request, 'logisticMediatheque/forms/addLoanForm.html',{'form': form})
+    
+def removeLoan(request, item_id, membre_id):  
+    media = Medias.objects.get( pk = item_id )
+    membre = Membres.objects.get( pk = membre_id )
+
+    membre.numLoan -= 1
+    media.dateLoan = None
+    media.borrower = None
+
+    membre.save()
+    media.save()
+
+    mediaLoans = Medias.objects.all().filter(borrower = membre_id)
+
+    return render(
+        request,
+        "logisticMediatheque/itemDetails/membreDetails.html",
+        { 
+            "membre": get_object_or_404( Membres, pk = membre_id ),
+            'mediaLoans': mediaLoans
+        })

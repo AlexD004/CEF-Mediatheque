@@ -1,0 +1,11 @@
+{% extends 'logisticMediatheque/base.html' %}
+
+{% block content %}
+
+    <h2>Créer un emprunt</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="Ajouter">
+    </form>
+{% endblock content %}
