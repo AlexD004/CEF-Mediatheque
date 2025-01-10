@@ -10,6 +10,9 @@ class Membres (models.Model):
     canLoan = models.BooleanField(default=True)
     numLoan = models.IntegerField(default=0)
 
+    def __str__(self):
+        return self.lastname + " " + self.firstname
+
 
 """ Class for Medias Details and Informations """
 
@@ -62,6 +65,9 @@ class Medias (models.Model):
         ("dvd", "DVD")
     ]
     mediaType = models.CharField(choices=MEDIATYPES, max_length=5, default="livre")
+
+    def __str__(self):
+        return self.title
 
 class Livres (Medias):
     author = models.ForeignKey(Author, on_delete = models.DO_NOTHING, null = True)

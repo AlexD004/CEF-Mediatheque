@@ -9,7 +9,6 @@ class addLivreForm(forms.ModelForm):
         fields = ['title','author','editor','issue','numPages']
         labels = {'title':'Titre','issue':'Date de sortie','numPages':'Nombre de pages'} 
 
-
 class addCDForm(forms.ModelForm):
     label = forms.ModelChoiceField(queryset=Label.objects.all(), label = "Label")
     artist = forms.ModelChoiceField(queryset=GroupOrSinger.objects.all(), label = "Artiste")

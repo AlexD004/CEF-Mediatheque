@@ -1,5 +1,5 @@
 from django.urls import path
-from logisticMediatheque.views import views_medias, views_jeux, views_membres, views_loan, views_historique
+from logisticMediatheque.views import views_medias, views_jeux, views_membres, views_loan
 
 app_name = "logisticMediatheque"
 
@@ -22,7 +22,6 @@ urlpatterns = [
     path('supprimer-jeu/<int:item_id>', views_jeux.removeJeu, name = 'removeJeu'),
     path('supprimer-media/<int:item_id>', views_medias.removeMedia, name = 'removeMedia'),
     # urls for read
-    path('historique', views_historique.historique, name = 'historique'),
     path('membres', views_membres.listMembres, name = 'listMembres'),
     path('membre/<int:membre_id>', views_membres.membreDetail, name = 'membreDetail'),
     path('jeu', views_jeux.listJeux, name = 'listJeux'),
