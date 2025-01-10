@@ -15,7 +15,7 @@ def login_user(request):
         if user is not None:
             login(request,user)
             items = Medias.objects.all()
-            return render(request, 'logisticMediatheque/listMedias.html',{'items': items})
+            return render(request, 'logisticMediatheque/lists/listMedias.html',{'items': items})
         else:
             messages.info(request, "Identifiant ou mot de passe incorrect")
     
@@ -26,4 +26,4 @@ def login_user(request):
 def logout_user(request):
     logout(request)
     items = Medias.objects.all()
-    return render(request, 'logisticMediatheque/listMedias.html',{'items': items})
+    return render(request, 'logisticMediatheque/lists/listMedias.html',{'items': items})
