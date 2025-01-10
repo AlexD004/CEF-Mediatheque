@@ -16,20 +16,38 @@ class Membres (models.Model):
 class Author (models.Model):
     name = models.CharField(max_length = 100, default = "Inconnu", unique = True)
 
+    def __str__(self):
+        return self.name
+
 class Editor (models.Model):
     name = models.CharField(max_length = 100, default = "Inconnu", unique = True)
+
+    def __str__(self):
+        return self.name
 
 class Label (models.Model):
     name = models.CharField(max_length = 100, default = "Inconnu", unique = True)
 
+    def __str__(self):
+        return self.name
+
 class GroupOrSinger (models.Model):
     name = models.CharField(max_length = 100, default = "Inconnu", unique = True)
+
+    def __str__(self):
+        return self.name
 
 class Director (models.Model):
     name = models.CharField(max_length = 100, default = "Inconnu", unique = True)
 
+    def __str__(self):
+        return self.name
+
 class GameEditor (models.Model):
     name = models.CharField(max_length = 100, default = "Inconnu", unique = True)
+
+    def __str__(self):
+        return self.name
 
 """ Class for Medias """
 
