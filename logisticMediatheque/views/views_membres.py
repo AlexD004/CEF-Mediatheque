@@ -53,15 +53,15 @@ def addMembre(request):
     action_type = 'Ajout'
 
     if request.method == 'POST':
-            form = addMembreForm(request.POST)
+        form = addMembreForm(request.POST)
 
-            if form.is_valid():
-                form.save()
-                membres = Membres.objects.all()
+        if form.is_valid():
+            form.save()
+            membres = Membres.objects.all()
 
-                logger.info("Ajout Membre par " + request.user.username + " | Nom du membre : " + request.POST.get('lastname') + " " + request.POST.get('firstname'))
+            logger.info("Ajout Membre par " + request.user.username + " | Nom du membre : " + request.POST.get('lastname') + " " + request.POST.get('firstname'))
 
-                return render(request, 'logisticMediatheque/lists/listMembres.html',{'membres': membres})
+            return render(request, 'logisticMediatheque/lists/listMembres.html',{'membres': membres})
     else:
         form = addMembreForm()
         return render(request, 'logisticMediatheque/forms/addMembreForm.html',{'form': form, 'actionType': action_type})
@@ -73,15 +73,15 @@ def updateMembre(request, item_id):
     jeu = Membres.objects.get( pk = item_id )
 
     if request.method == 'POST':
-            form = addMembreForm(request.POST, instance=jeu)
+        form = addMembreForm(request.POST, instance=jeu)
 
-            if form.is_valid():
-                form.save()
-                membres = Membres.objects.all()
+        if form.is_valid():
+            form.save()
+            membres = Membres.objects.all()
 
-                logger.info("MaJ Membre par " + request.user.username + " | Nom du membre : " + request.POST.get('lastname') + " " + request.POST.get('firstname'))
+            logger.info("MaJ Membre par " + request.user.username + " | Nom du membre : " + request.POST.get('lastname') + " " + request.POST.get('firstname'))
 
-                return render(request, 'logisticMediatheque/lists/listMembres.html',{'membres': membres})
+            return render(request, 'logisticMediatheque/lists/listMembres.html',{'membres': membres})
     else:
         form = addMembreForm(instance=jeu)
         return render(request, 'logisticMediatheque/forms/addMembreForm.html',{'form': form, 'actionType': action_type})
