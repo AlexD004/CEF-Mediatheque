@@ -20,6 +20,7 @@
             <div class="item">
                 <div class="mediaInfos">
                     <a href="{% url 'logisticMediatheque:mediaDetail' mediaLoan.mediaType mediaLoan.id %}">{{mediaLoan.title}}</a><br/>
+                    <p>Emprunté le : {{mediaLoan.dateLoan}} / {{mediaLoan.timeLoan}} jour(s) depuis l'emprunt</p>
                 </div>
 
                 <div class="itemActions">

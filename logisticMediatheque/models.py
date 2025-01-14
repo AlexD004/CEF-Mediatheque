@@ -59,6 +59,7 @@ class Medias (models.Model):
     issue = models.DateField()
     borrower = models.ForeignKey(Membres, on_delete= models.DO_NOTHING, null=True)
     dateLoan = models.DateField(null = True, blank = True)
+    timeLoan = models.IntegerField(null = True)
     MEDIATYPES = [
         ("livre", "Livre"),
         ("cd", "CD"),

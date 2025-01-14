@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from logisticMediatheque.models import Medias, Membres
 from logisticMediatheque.forms import addLoanForm
-import datetime
+from datetime import datetime
 import logging
 
 logging.basicConfig(
@@ -24,25 +24,42 @@ def addLoan(request):
                 membreLoaning = Membres.objects.get( pk = membre.id )
                 mediaLoaned = Medias.objects.get( pk = media.id )
 
-                membreLoaning.numLoan += 1 
-                mediaLoaned.borrower = membre
-                mediaLoaned.dateLoan = datetime.datetime.now()
-
-                membreLoaning.save()
-                mediaLoaned.save()
-
                 mediaLoans = Medias.objects.all().filter(borrower = membre.id)
 
-                logger.info("Ajout Emprunt " + request.user.username + " | Nom du membre : " + membre.lastname + " " + membre.firstname + " / Nom du médias : " + media.title )
+                for media in mediaLoans:
+                    now = datetime.now().date()
+                    dateLoan = media.dateLoan
+                    timeLoan = now - dateLoan
+                    media.timeLoan = timeLoan.days
+                    media.save()
+                    if media.timeLoan > 7 :
+                        membre.canLoan = False
+                        membre.save()
+                          
+                if membre.canLoan == True:
+                    membreLoaning.numLoan += 1 
+                    mediaLoaned.borrower = membre
+                    mediaLoaned.dateLoan = datetime.now()
 
-                return render(
-                    request,
-                    "logisticMediatheque/itemDetails/membreDetails.html",
-                    { 
-                        "membre": get_object_or_404( Membres, pk = membre.id ),
-                        'mediaLoans': mediaLoans
-                    }
-                )
+                    membreLoaning.save()
+                    mediaLoaned.save()
+
+                    mediaLoans = Medias.objects.all().filter(borrower = membre.id)
+
+                    logger.info("Ajout Emprunt " + request.user.username + " | Nom du membre : " + membre.lastname + " " + membre.firstname + " / Nom du médias : " + media.title )
+
+                    return render(
+                        request,
+                        "logisticMediatheque/itemDetails/membreDetails.html",
+                        { 
+                            "membre": get_object_or_404( Membres, pk = membre.id ),
+                            'mediaLoans': mediaLoans
+                        }
+                    )
+                else: 
+                    form = addLoanForm()
+                    message = 'Ce membre possède des emprunts en retard, il ne peut plus emprunter.'
+                    return render(request, 'logisticMediatheque/forms/addLoanForm.html',{'form': form, 'message': message})
     else:
         form = addLoanForm()
         return render(request, 'logisticMediatheque/forms/addLoanForm.html',{'form': form})
@@ -54,7 +71,9 @@ def removeLoan(request, item_id, membre_id):
     membre = Membres.objects.get( pk = membre_id )
 
     membre.numLoan -= 1
+    membre.canLoan = True
     media.dateLoan = None
+    media.timeLoan = None
     media.borrower = None
 
     membre.save()
@@ -63,6 +82,16 @@ def removeLoan(request, item_id, membre_id):
     mediaLoans = Medias.objects.all().filter(borrower = membre_id)
 
     logger.info("Suppression Emprunt " + request.user.username + " | Nom du membre : " + membre.lastname + " " + membre.firstname + " / Nom du médias : " + media.title )
+
+    for media in mediaLoans:
+        now = datetime.now().date()
+        dateLoan = media.dateLoan
+        timeLoan = now - dateLoan
+        media.timeLoan = timeLoan.days
+        media.save()
+        if media.timeLoan > 7 :
+            membre.canLoan = False
+            membre.save()
 
     return render(
         request,
