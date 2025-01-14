@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from logisticMediatheque.models import Medias, Membres
 from logisticMediatheque.forms import addMembreForm
 import logging
+import datetime
 
 logging.basicConfig(
     filename="logging.log",
@@ -17,12 +18,21 @@ def listMembres(request):
 
 def membreDetail(request, membre_id):
     mediaLoans = Medias.objects.all().filter(borrower = membre_id)
+
+    for media in mediaLoans:
+        now = datetime.datetime.now().date()
+        dateLoan = media.dateLoan
+        timeLoan = now - dateLoan
+        media.timeLoan = timeLoan.days
+
     return render(
         request,
         "logisticMediatheque/itemDetails/membreDetails.html",
         { 
             "membre": get_object_or_404( Membres, pk = membre_id ),
-            "mediaLoans": mediaLoans
+            "mediaLoans": mediaLoans,
+            "now": now,
+            "dateLoan":dateLoan
         }
     )
 

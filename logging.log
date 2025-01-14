@@ -1,0 +1,884 @@
+10-Jan-2514:52:04 - INFO - Ajout Livre par CEFMediatheque | Titre du livre : Tubidou
+10-Jan-2514:54:11 - INFO - Ajout Livre par CEFMediatheque | Titre du livre : sdfrgtyhujkil
+10-Jan-2514:54:26 - INFO - MaJ Livre par CEFMediatheque | Titre du Livre : poiuy
+10-Jan-2514:54:30 - INFO - Suppression Livre par CEFMediatheque | Titre du livre : poiuy
+10-Jan-2514:54:31 - INFO - Suppression Livre par CEFMediatheque | Titre du livre : Tubidou
+10-Jan-2514:54:41 - INFO - Ajout Emprunt CEFMediatheque | Nom du membre : Le Cailloux Pierre / Nom du médias : À qui la faute
+10-Jan-2515:00:00 - INFO - C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_loan.py changed, reloading.
+10-Jan-2515:00:49 - INFO - Ajout Emprunt CEFMediatheque | Nom du membre : Dupré Alex / Nom du médias : Gladiator
+10-Jan-2515:01:22 - ERROR - Internal Server Error: /emprunt
+Traceback (most recent call last):
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    self.check_response(response, callback)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\core\handlers\base.py", line 332, in check_response
+    raise ValueError(
+    ...<2 lines>...
+    )
+ValueError: The view logisticMediatheque.views.views_loan.addLoan didn't return an HttpResponse object. It returned None instead.
+10-Jan-2515:14:14 - INFO - C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_loan.py changed, reloading.
+10-Jan-2515:14:39 - INFO - C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_loan.py changed, reloading.
+10-Jan-2515:15:56 - INFO - C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_loan.py changed, reloading.
+10-Jan-2515:16:07 - INFO - Suppression Emprunt CEFMediatheque | Nom du membre : Dupré Alex / Nom du médias : Gladiator
+10-Jan-2515:16:15 - ERROR - Internal Server Error: /emprunt
+Traceback (most recent call last):
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_loan.py", line 28, in addLoan
+    mediasLoanedByMembre = Medias.objects.get( borrower = membre.id)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\db\models\query.py", line 652, in get
+    raise self.model.MultipleObjectsReturned(
+    ...<5 lines>...
+    )
+logisticMediatheque.models.Medias.MultipleObjectsReturned: get() returned more than one Medias -- it returned 2!
+10-Jan-2515:17:25 - INFO - C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_loan.py changed, reloading.
+10-Jan-2515:17:41 - ERROR - Internal Server Error: /emprunt
+Traceback (most recent call last):
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_loan.py", line 28, in addLoan
+    mediasLoanedByMembre = Medias.objects.get( borrower = membre.id)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\db\models\query.py", line 652, in get
+    raise self.model.MultipleObjectsReturned(
+    ...<5 lines>...
+    )
+logisticMediatheque.models.Medias.MultipleObjectsReturned: get() returned more than one Medias -- it returned 2!
+10-Jan-2515:18:30 - INFO - C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_loan.py changed, reloading.
+10-Jan-2515:18:38 - INFO - Ajout Emprunt CEFMediatheque | Nom du membre : Dupré Alex / Nom du médias : Plus grand que le ciel
+10-Jan-2515:19:14 - INFO - Suppression Emprunt CEFMediatheque | Nom du membre : Dupré Alex / Nom du médias : Les Lendemains
+10-Jan-2515:19:15 - INFO - Suppression Emprunt CEFMediatheque | Nom du membre : Dupré Alex / Nom du médias : Plus grand que le ciel
+10-Jan-2515:20:50 - INFO - C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_loan.py changed, reloading.
+10-Jan-2515:21:43 - INFO - C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_loan.py changed, reloading.
+10-Jan-2515:21:48 - ERROR - Internal Server Error: /emprunt
+Traceback (most recent call last):
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_loan.py", line 32, in addLoan
+    if now - dateLoan > 7:
+       ~~~~^~~~~~~~~~
+TypeError: unsupported operand type(s) for -: 'datetime.datetime' and 'datetime.date'
+10-Jan-2515:28:32 - INFO - C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_loan.py changed, reloading.
+10-Jan-2515:28:43 - ERROR - Internal Server Error: /emprunt
+Traceback (most recent call last):
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_loan.py", line 32, in addLoan
+    if now - dateLoan > 7:
+       ~~~~^~~~~~~~~~
+TypeError: unsupported operand type(s) for -: 'datetime.datetime' and 'datetime.date'
+10-Jan-2515:29:44 - INFO - C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_loan.py changed, reloading.
+10-Jan-2515:29:52 - ERROR - Internal Server Error: /emprunt
+Traceback (most recent call last):
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_loan.py", line 32, in addLoan
+    deltaTime = now - dateLoan
+                ~~~~^~~~~~~~~~
+TypeError: unsupported operand type(s) for -: 'datetime.datetime' and 'datetime.date'
+10-Jan-2515:36:27 - INFO - C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_loan.py changed, reloading.
+10-Jan-2515:36:40 - ERROR - Internal Server Error: /emprunt
+Traceback (most recent call last):
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_loan.py", line 39, in addLoan
+    mediaLoaned.dateLoan = datetime.datetime.now()
+                           ^^^^^^^^^^^^^^^^^
+AttributeError: type object 'datetime.datetime' has no attribute 'datetime'
+10-Jan-2515:37:09 - INFO - C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_loan.py changed, reloading.
+10-Jan-2515:37:13 - INFO - Ajout Emprunt CEFMediatheque | Nom du membre : Dupré Alex / Nom du médias : Le Trône de Fer T.1
+10-Jan-2515:37:36 - INFO - Ajout Emprunt CEFMediatheque | Nom du membre : Dupré Alex / Nom du médias : Les Lendemains
+10-Jan-2515:37:46 - ERROR - Internal Server Error: /emprunt
+Traceback (most recent call last):
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\db\backends\sqlite3\base.py", line 354, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.IntegrityError: NOT NULL constraint failed: logisticMediatheque_medias.issue
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_loan.py", line 42, in addLoan
+    mediaLoaned.save()
+    ~~~~~~~~~~~~~~~~^^
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\db\models\base.py", line 892, in save
+    self.save_base(
+    ~~~~~~~~~~~~~~^
+        using=using,
+        ^^^^^^^^^^^^
+    ...<2 lines>...
+        update_fields=update_fields,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\db\models\base.py", line 998, in save_base
+    updated = self._save_table(
+        raw,
+    ...<4 lines>...
+        update_fields,
+    )
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\db\models\base.py", line 1130, in _save_table
+    updated = self._do_update(
+        base_qs, using, pk_val, values, update_fields, forced_update
+    )
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\db\models\base.py", line 1195, in _do_update
+    return filtered._update(values) > 0
+           ~~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\db\models\query.py", line 1278, in _update
+    return query.get_compiler(self.db).execute_sql(CURSOR)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\db\models\sql\compiler.py", line 2003, in execute_sql
+    cursor = super().execute_sql(result_type)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\db\models\sql\compiler.py", line 1574, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\db\backends\sqlite3\base.py", line 354, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: NOT NULL constraint failed: logisticMediatheque_medias.issue
+10-Jan-2515:38:10 - INFO - Suppression Emprunt CEFMediatheque | Nom du membre : Le Cailloux Pierre / Nom du médias : Le Meurtre de Roger Ackroyd
+10-Jan-2515:38:11 - INFO - Suppression Emprunt CEFMediatheque | Nom du membre : Le Cailloux Pierre / Nom du médias : À qui la faute
+10-Jan-2515:38:14 - INFO - Suppression Membre par CEFMediatheque | Nom du membre : bob BO
+10-Jan-2515:38:14 - INFO - Suppression Membre par CEFMediatheque | Nom du membre : hj ghj
+10-Jan-2515:38:15 - INFO - Suppression Membre par CEFMediatheque | Nom du membre : ert ert
+10-Jan-2515:38:15 - INFO - Suppression Membre par CEFMediatheque | Nom du membre : Johny Bobby
+10-Jan-2515:38:16 - INFO - Suppression Membre par CEFMediatheque | Nom du membre : Le Cailloux Pierre
+10-Jan-2515:38:19 - INFO - Suppression Emprunt CEFMediatheque | Nom du membre : Dupré Alex / Nom du médias : Le Trône de Fer T.2
+10-Jan-2515:38:22 - INFO - Suppression Emprunt CEFMediatheque | Nom du membre : Dupré Alex / Nom du médias : Le Trône de Fer T.1
+10-Jan-2515:38:22 - INFO - Suppression Emprunt CEFMediatheque | Nom du membre : Dupré Alex / Nom du médias : Les Lendemains
+10-Jan-2515:38:40 - INFO - Ajout Membre par CEFMediatheque | Nom du membre : Doe John
+10-Jan-2515:38:47 - INFO - Ajout Emprunt CEFMediatheque | Nom du membre : Doe John / Nom du médias : Le Trône de Fer T.1
+10-Jan-2515:38:56 - ERROR - Internal Server Error: /emprunt
+Traceback (most recent call last):
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\db\backends\sqlite3\base.py", line 354, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.IntegrityError: NOT NULL constraint failed: logisticMediatheque_medias.issue
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_loan.py", line 42, in addLoan
+    mediaLoaned.save()
+    ~~~~~~~~~~~~~~~~^^
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\db\models\base.py", line 892, in save
+    self.save_base(
+    ~~~~~~~~~~~~~~^
+        using=using,
+        ^^^^^^^^^^^^
+    ...<2 lines>...
+        update_fields=update_fields,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\db\models\base.py", line 998, in save_base
+    updated = self._save_table(
+        raw,
+    ...<4 lines>...
+        update_fields,
+    )
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\db\models\base.py", line 1130, in _save_table
+    updated = self._do_update(
+        base_qs, using, pk_val, values, update_fields, forced_update
+    )
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\db\models\base.py", line 1195, in _do_update
+    return filtered._update(values) > 0
+           ~~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\db\models\query.py", line 1278, in _update
+    return query.get_compiler(self.db).execute_sql(CURSOR)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\db\models\sql\compiler.py", line 2003, in execute_sql
+    cursor = super().execute_sql(result_type)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\db\models\sql\compiler.py", line 1574, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\db\backends\sqlite3\base.py", line 354, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: NOT NULL constraint failed: logisticMediatheque_medias.issue
+10-Jan-2515:39:23 - INFO - Ajout Emprunt CEFMediatheque | Nom du membre : Dupré Alex / Nom du médias : Plus grand que le ciel
+10-Jan-2515:39:59 - INFO - Ajout Emprunt CEFMediatheque | Nom du membre : Dupré Alex / Nom du médias : Plus grand que le ciel
+10-Jan-2515:40:08 - ERROR - Internal Server Error: /emprunt
+Traceback (most recent call last):
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    self.check_response(response, callback)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\core\handlers\base.py", line 332, in check_response
+    raise ValueError(
+    ...<2 lines>...
+    )
+ValueError: The view logisticMediatheque.views.views_loan.addLoan didn't return an HttpResponse object. It returned None instead.
+10-Jan-2515:41:48 - INFO - C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_loan.py changed, reloading.
+10-Jan-2515:41:55 - INFO - C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_loan.py changed, reloading.
+10-Jan-2515:42:03 - ERROR - Internal Server Error: /emprunt
+Traceback (most recent call last):
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_loan.py", line 33, in addLoan
+    if maxLoan > now :
+       ^^^^^^^^^^^^^
+TypeError: '>' not supported between instances of 'datetime.date' and 'datetime.datetime'
+10-Jan-2515:47:23 - INFO - C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_loan.py changed, reloading.
+10-Jan-2515:47:32 - ERROR - Internal Server Error: /emprunt
+Traceback (most recent call last):
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_loan.py", line 32, in addLoan
+    if now - dateLoan > 7 :
+       ~~~~^~~~~~~~~~
+TypeError: unsupported operand type(s) for -: 'datetime.datetime' and 'str'
+10-Jan-2515:47:49 - INFO - C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_loan.py changed, reloading.
+10-Jan-2515:47:58 - ERROR - Internal Server Error: /emprunt
+Traceback (most recent call last):
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_loan.py", line 31, in addLoan
+    dateLoan = media.dateLoan.strptime('%yyyy-%MM-%dd')
+               ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'datetime.date' object has no attribute 'strptime'. Did you mean: 'strftime'?
+10-Jan-2515:49:05 - INFO - C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_loan.py changed, reloading.
+10-Jan-2515:49:10 - WARNING - Not Found: /favicon.ico
+10-Jan-2515:49:14 - ERROR - Internal Server Error: /emprunt
+Traceback (most recent call last):
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_loan.py", line 32, in addLoan
+    if now - dateLoan > 7 :
+       ~~~~^~~~~~~~~~
+TypeError: unsupported operand type(s) for -: 'str' and 'datetime.date'
+10-Jan-2515:49:27 - INFO - C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_loan.py changed, reloading.
+10-Jan-2515:49:36 - ERROR - Internal Server Error: /emprunt
+Traceback (most recent call last):
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_loan.py", line 32, in addLoan
+    if now - dateLoan > 7 :
+       ~~~~^~~~~~~~~~
+TypeError: unsupported operand type(s) for -: 'str' and 'str'
+10-Jan-2515:51:59 - INFO - C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_loan.py changed, reloading.
+10-Jan-2515:52:03 - WARNING - Not Found: /favicon.ico
+10-Jan-2515:52:06 - ERROR - Internal Server Error: /emprunt
+Traceback (most recent call last):
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_loan.py", line 31, in addLoan
+    dateLoan = datetime.strptime(media.dateLoan, "%yyyy-%MM-%dd").date()
+               ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: strptime() argument 1 must be str, not datetime.date
+10-Jan-2515:53:19 - INFO - C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_loan.py changed, reloading.
+10-Jan-2515:53:22 - WARNING - Not Found: /favicon.ico
+10-Jan-2515:53:25 - ERROR - Internal Server Error: /emprunt
+Traceback (most recent call last):
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_loan.py", line 32, in addLoan
+    if now - dateLoan > 7 :
+       ^^^^^^^^^^^^^^^^^^
+TypeError: '>' not supported between instances of 'datetime.timedelta' and 'int'
+10-Jan-2515:54:52 - INFO - C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_loan.py changed, reloading.
+10-Jan-2515:54:55 - WARNING - Not Found: /favicon.ico
+10-Jan-2515:54:58 - ERROR - Internal Server Error: /emprunt
+Traceback (most recent call last):
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_loan.py", line 32, in addLoan
+    if now - dateLoan > 7 :
+       ~~~~^~~~~~~~~~
+TypeError: unsupported operand type(s) for -: 'str' and 'datetime.date'
+10-Jan-2515:57:56 - INFO - C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_membres.py changed, reloading.
+10-Jan-2515:58:20 - ERROR - Internal Server Error: /membre/4
+Traceback (most recent call last):
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_membres.py", line 22, in membreDetail
+    return render(
+        request,
+    ...<5 lines>...
+        }
+    )
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+        contents,
+    ...<2 lines>...
+        self.engine,
+    )
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\template\loader_tags.py", line 295, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\template\loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\template\base.py", line 489, in parse
+    raise self.error(token, e)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\template\base.py", line 487, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\template\base.py", line 605, in compile_filter
+    return FilterExpression(token, self)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\template\base.py", line 706, in __init__
+    raise TemplateSyntaxError(
+    ...<2 lines>...
+    )
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '\u2663today' from '\u2663today'
+10-Jan-2515:59:23 - INFO - C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_membres.py changed, reloading.
+10-Jan-2515:59:35 - INFO - C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_membres.py changed, reloading.
+10-Jan-2515:59:43 - INFO - C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_membres.py changed, reloading.
+10-Jan-2515:59:54 - INFO - C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_membres.py changed, reloading.
+10-Jan-2516:01:33 - INFO - C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_membres.py changed, reloading.
+10-Jan-2516:01:42 - INFO - C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_membres.py changed, reloading.
+10-Jan-2516:02:19 - INFO - C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_membres.py changed, reloading.
+10-Jan-2516:02:31 - INFO - C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_membres.py changed, reloading.
+10-Jan-2516:02:54 - INFO - C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_membres.py changed, reloading.
+10-Jan-2516:03:01 - ERROR - Internal Server Error: /membre/4
+Traceback (most recent call last):
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_membres.py", line 25, in membreDetail
+    test = today-dateLoan
+           ~~~~~^~~~~~~~~
+TypeError: unsupported operand type(s) for -: 'str' and 'str'
+10-Jan-2516:04:48 - INFO - C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_membres.py changed, reloading.
+10-Jan-2516:04:53 - ERROR - Internal Server Error: /membre/4
+Traceback (most recent call last):
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_membres.py", line 22, in membreDetail
+    today = datetime.datetime.now().strptime("%Y-%M-%d").date()
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+TypeError: strptime() takes exactly 2 arguments (1 given)
+10-Jan-2516:05:51 - INFO - C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_membres.py changed, reloading.
+10-Jan-2516:06:01 - ERROR - Internal Server Error: /membre/4
+Traceback (most recent call last):
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_membres.py", line 22, in membreDetail
+    today = datetime.today().strftime('%Y-%m-%d')
+            ^^^^^^^^^^^^^^
+AttributeError: module 'datetime' has no attribute 'today'
+10-Jan-2516:06:11 - INFO - C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_membres.py changed, reloading.
+10-Jan-2516:06:13 - ERROR - Internal Server Error: /membre/4
+Traceback (most recent call last):
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_membres.py", line 25, in membreDetail
+    test = today-dateLoan
+           ~~~~~^~~~~~~~~
+TypeError: unsupported operand type(s) for -: 'str' and 'datetime.date'
+10-Jan-2516:06:19 - INFO - C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_membres.py changed, reloading.
+10-Jan-2516:06:22 - ERROR - Internal Server Error: /membre/4
+Traceback (most recent call last):
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_membres.py", line 34, in membreDetail
+    "test": test
+            ^^^^
+NameError: name 'test' is not defined
+10-Jan-2516:06:28 - INFO - C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_membres.py changed, reloading.
+10-Jan-2516:06:40 - INFO - C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_membres.py changed, reloading.
+10-Jan-2516:09:45 - INFO - C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_membres.py changed, reloading.
+10-Jan-2516:09:48 - ERROR - Internal Server Error: /membre/4
+Traceback (most recent call last):
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_membres.py", line 25, in membreDetail
+    newdate1 = datetime.datetime.strptime(date1, "%d/%m%Y")
+  File "C:\Users\dupre\AppData\Local\Programs\Python\Python313\Lib\_strptime.py", line 573, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+                                    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dupre\AppData\Local\Programs\Python\Python313\Lib\_strptime.py", line 352, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+                     (data_string, format))
+ValueError: time data '31/12/2015' does not match format '%d/%m%Y'
+10-Jan-2516:10:05 - INFO - C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_membres.py changed, reloading.
+10-Jan-2516:10:06 - ERROR - Internal Server Error: /membre/4
+Traceback (most recent call last):
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_membres.py", line 25, in membreDetail
+    newdate1 = datetime.datetime.strptime(date1, "%d/%M%Y")
+  File "C:\Users\dupre\AppData\Local\Programs\Python\Python313\Lib\_strptime.py", line 573, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+                                    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dupre\AppData\Local\Programs\Python\Python313\Lib\_strptime.py", line 352, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+                     (data_string, format))
+ValueError: time data '31/12/2015' does not match format '%d/%M%Y'
+10-Jan-2516:10:10 - ERROR - Internal Server Error: /membre/4
+Traceback (most recent call last):
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_membres.py", line 25, in membreDetail
+    newdate1 = datetime.datetime.strptime(date1, "%d/%M%Y")
+  File "C:\Users\dupre\AppData\Local\Programs\Python\Python313\Lib\_strptime.py", line 573, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+                                    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dupre\AppData\Local\Programs\Python\Python313\Lib\_strptime.py", line 352, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+                     (data_string, format))
+ValueError: time data '31/12/2015' does not match format '%d/%M%Y'
+10-Jan-2516:10:16 - ERROR - Internal Server Error: /membre/4
+Traceback (most recent call last):
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_membres.py", line 25, in membreDetail
+    newdate1 = datetime.datetime.strptime(date1, "%d/%M%Y")
+  File "C:\Users\dupre\AppData\Local\Programs\Python\Python313\Lib\_strptime.py", line 573, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+                                    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dupre\AppData\Local\Programs\Python\Python313\Lib\_strptime.py", line 352, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+                     (data_string, format))
+ValueError: time data '31/12/2015' does not match format '%d/%M%Y'
+10-Jan-2516:10:33 - INFO - C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_membres.py changed, reloading.
+10-Jan-2516:11:07 - INFO - C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_membres.py changed, reloading.
+10-Jan-2516:11:10 - ERROR - Internal Server Error: /membre/4
+Traceback (most recent call last):
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_membres.py", line 25, in membreDetail
+    newdate1 = datetime.datetime.strptime(date1, "%d/%M/%Y")
+TypeError: strptime() argument 1 must be str, not datetime.datetime
+14-Jan-2510:38:53 - WARNING - Not Found: /favicon.ico
+14-Jan-2511:07:10 - ERROR - Internal Server Error: /membre/4
+Traceback (most recent call last):
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_membres.py", line 25, in membreDetail
+    newdate1 = datetime.datetime.strptime(date1, "%d/%M/%Y")
+TypeError: strptime() argument 1 must be str, not datetime.datetime
+14-Jan-2511:07:30 - INFO - C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_membres.py changed, reloading.
+14-Jan-2511:07:32 - ERROR - Internal Server Error: /membre/4
+Traceback (most recent call last):
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_membres.py", line 25, in membreDetail
+    newdate1 = datetime.datetime.strptime(date1, "%d/%M/%Y")
+TypeError: strptime() argument 1 must be str, not datetime.date
+14-Jan-2511:07:49 - INFO - C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_membres.py changed, reloading.
+14-Jan-2511:07:51 - ERROR - Internal Server Error: /membre/4
+Traceback (most recent call last):
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_membres.py", line 25, in membreDetail
+    test = date1 - date2
+           ~~~~~~^~~~~~~
+TypeError: unsupported operand type(s) for -: 'datetime.date' and 'str'
+14-Jan-2511:08:53 - INFO - C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_membres.py changed, reloading.
+14-Jan-2511:08:57 - ERROR - Internal Server Error: /membre/4
+Traceback (most recent call last):
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_membres.py", line 23, in membreDetail
+    date2= datetime.datetime.date('01/01/2025')
+TypeError: descriptor 'date' for 'datetime.datetime' objects doesn't apply to a 'str' object
+14-Jan-2511:09:12 - INFO - C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_membres.py changed, reloading.
+14-Jan-2511:09:15 - ERROR - Internal Server Error: /membre/4
+Traceback (most recent call last):
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_membres.py", line 23, in membreDetail
+    date2= datetime.datetime.date(1/1/2025)
+TypeError: descriptor 'date' for 'datetime.datetime' objects doesn't apply to a 'float' object
+14-Jan-2511:10:33 - INFO - C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_membres.py changed, reloading.
+14-Jan-2511:10:36 - ERROR - Internal Server Error: /membre/4
+Traceback (most recent call last):
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_membres.py", line 23, in membreDetail
+    date2= datetime.datetime.date(2025,10,9)
+TypeError: descriptor 'date' for 'datetime.datetime' objects doesn't apply to a 'int' object
+14-Jan-2511:10:52 - INFO - C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_membres.py changed, reloading.
+14-Jan-2511:11:12 - INFO - C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_membres.py changed, reloading.
+14-Jan-2511:12:21 - INFO - C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_loan.py changed, reloading.
+14-Jan-2511:12:28 - ERROR - Internal Server Error: /emprunt
+Traceback (most recent call last):
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_loan.py", line 32, in addLoan
+    if now - dateLoan > 7 :
+       ^^^^^^^^^^^^^^^^^^
+TypeError: '>' not supported between instances of 'datetime.timedelta' and 'int'
+14-Jan-2511:13:40 - INFO - C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_membres.py changed, reloading.
+14-Jan-2511:13:54 - INFO - C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_membres.py changed, reloading.
+14-Jan-2511:14:26 - INFO - C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_membres.py changed, reloading.
+14-Jan-2511:20:33 - INFO - C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_membres.py changed, reloading.
+14-Jan-2511:22:34 - INFO - C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_membres.py changed, reloading.
+14-Jan-2511:25:43 - INFO - C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_membres.py changed, reloading.
+14-Jan-2511:25:47 - ERROR - Internal Server Error: /membre/4
+Traceback (most recent call last):
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_membres.py", line 26, in membreDetail
+    media.timeLoan = datetime.datetime.strptime(timeLoan, '%Y/%M/%d').date()
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+TypeError: strptime() argument 1 must be str, not datetime.timedelta
+14-Jan-2511:26:06 - INFO - C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_membres.py changed, reloading.
+14-Jan-2511:26:10 - ERROR - Internal Server Error: /membre/4
+Traceback (most recent call last):
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_membres.py", line 26, in membreDetail
+    media.timeLoan = datetime.datetime.strptime(timeLoan, '%Y/%M/%d').date()
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+TypeError: strptime() argument 1 must be str, not datetime.timedelta
+14-Jan-2511:26:12 - ERROR - Internal Server Error: /membre/4
+Traceback (most recent call last):
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_membres.py", line 26, in membreDetail
+    media.timeLoan = datetime.datetime.strptime(timeLoan, '%Y/%M/%d').date()
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+TypeError: strptime() argument 1 must be str, not datetime.timedelta
+14-Jan-2511:26:12 - WARNING - Not Found: /favicon.ico
+14-Jan-2511:26:19 - INFO - C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_membres.py changed, reloading.
+14-Jan-2511:26:22 - ERROR - Internal Server Error: /membre/4
+Traceback (most recent call last):
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_membres.py", line 26, in membreDetail
+    media.timeLoan = datetime.datetime.strftime(timeLoan, '%Y/%M/%d').date()
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+TypeError: descriptor 'strftime' for 'datetime.date' objects doesn't apply to a 'datetime.timedelta' object
+14-Jan-2511:26:46 - INFO - C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_membres.py changed, reloading.
+14-Jan-2511:28:02 - INFO - C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_membres.py changed, reloading.
+14-Jan-2511:28:13 - ERROR - Internal Server Error: /membre/4
+Traceback (most recent call last):
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_membres.py", line 26, in membreDetail
+    media.timeLoan = timeLoan.date()
+                     ^^^^^^^^^^^^^
+AttributeError: 'datetime.timedelta' object has no attribute 'date'
+14-Jan-2511:29:31 - INFO - C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_membres.py changed, reloading.
+14-Jan-2511:29:34 - ERROR - Internal Server Error: /membre/4
+Traceback (most recent call last):
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_membres.py", line 26, in membreDetail
+    media.timeLoan = datetime.date(timeLoan.day, timeLoan.month, timeLoan.year)
+                                   ^^^^^^^^^^^^
+AttributeError: 'datetime.timedelta' object has no attribute 'day'. Did you mean: 'days'?
+14-Jan-2511:30:34 - INFO - C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_membres.py changed, reloading.
+14-Jan-2511:31:51 - INFO - C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\models.py changed, reloading.
+14-Jan-2511:33:34 - INFO - C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_loan.py changed, reloading.
+14-Jan-2511:33:40 - ERROR - Internal Server Error: /emprunt
+Traceback (most recent call last):
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_loan.py", line 33, in addLoan
+    if timeLoan > 7 :
+       ^^^^^^^^^^^^
+TypeError: '>' not supported between instances of 'datetime.timedelta' and 'int'
+14-Jan-2511:36:53 - INFO - C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_loan.py changed, reloading.
+14-Jan-2511:38:29 - INFO - C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_loan.py changed, reloading.
+14-Jan-2511:40:00 - INFO - C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_loan.py changed, reloading.
+14-Jan-2511:40:53 - INFO - C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_loan.py changed, reloading.
+14-Jan-2511:40:57 - INFO - C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_loan.py changed, reloading.
+14-Jan-2511:41:29 - INFO - C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_loan.py changed, reloading.
+14-Jan-2511:41:44 - ERROR - Internal Server Error: /emprunt
+Traceback (most recent call last):
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\db\models\fields\__init__.py", line 2123, in get_prep_value
+    return int(value)
+TypeError: int() argument must be a string, a bytes-like object or a real number, not 'datetime.timedelta'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_loan.py", line 34, in addLoan
+    media.save()
+    ~~~~~~~~~~^^
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\db\models\base.py", line 892, in save
+    self.save_base(
+    ~~~~~~~~~~~~~~^
+        using=using,
+        ^^^^^^^^^^^^
+    ...<2 lines>...
+        update_fields=update_fields,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\db\models\base.py", line 998, in save_base
+    updated = self._save_table(
+        raw,
+    ...<4 lines>...
+        update_fields,
+    )
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\db\models\base.py", line 1130, in _save_table
+    updated = self._do_update(
+        base_qs, using, pk_val, values, update_fields, forced_update
+    )
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\db\models\base.py", line 1195, in _do_update
+    return filtered._update(values) > 0
+           ~~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\db\models\query.py", line 1278, in _update
+    return query.get_compiler(self.db).execute_sql(CURSOR)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\db\models\sql\compiler.py", line 2003, in execute_sql
+    cursor = super().execute_sql(result_type)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\db\models\sql\compiler.py", line 1561, in execute_sql
+    sql, params = self.as_sql()
+                  ~~~~~~~~~~~^^
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\db\models\sql\compiler.py", line 1966, in as_sql
+    val = field.get_db_prep_save(val, connection=self.connection)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\db\models\fields\__init__.py", line 1008, in get_db_prep_save
+    return self.get_db_prep_value(value, connection=connection, prepared=False)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\db\models\fields\__init__.py", line 2130, in get_db_prep_value
+    value = super().get_db_prep_value(value, connection, prepared)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\db\models\fields\__init__.py", line 1001, in get_db_prep_value
+    value = self.get_prep_value(value)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\db\models\fields\__init__.py", line 2125, in get_prep_value
+    raise e.__class__(
+        "Field '%s' expected a number but got %r." % (self.name, value),
+    ) from e
+TypeError: Field 'timeLoan' expected a number but got datetime.timedelta(days=70).
+14-Jan-2511:41:56 - ERROR - Internal Server Error: /emprunt
+Traceback (most recent call last):
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\db\models\fields\__init__.py", line 2123, in get_prep_value
+    return int(value)
+TypeError: int() argument must be a string, a bytes-like object or a real number, not 'datetime.timedelta'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_loan.py", line 34, in addLoan
+    media.save()
+    ~~~~~~~~~~^^
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\db\models\base.py", line 892, in save
+    self.save_base(
+    ~~~~~~~~~~~~~~^
+        using=using,
+        ^^^^^^^^^^^^
+    ...<2 lines>...
+        update_fields=update_fields,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\db\models\base.py", line 998, in save_base
+    updated = self._save_table(
+        raw,
+    ...<4 lines>...
+        update_fields,
+    )
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\db\models\base.py", line 1130, in _save_table
+    updated = self._do_update(
+        base_qs, using, pk_val, values, update_fields, forced_update
+    )
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\db\models\base.py", line 1195, in _do_update
+    return filtered._update(values) > 0
+           ~~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\db\models\query.py", line 1278, in _update
+    return query.get_compiler(self.db).execute_sql(CURSOR)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\db\models\sql\compiler.py", line 2003, in execute_sql
+    cursor = super().execute_sql(result_type)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\db\models\sql\compiler.py", line 1561, in execute_sql
+    sql, params = self.as_sql()
+                  ~~~~~~~~~~~^^
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\db\models\sql\compiler.py", line 1966, in as_sql
+    val = field.get_db_prep_save(val, connection=self.connection)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\db\models\fields\__init__.py", line 1008, in get_db_prep_save
+    return self.get_db_prep_value(value, connection=connection, prepared=False)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\db\models\fields\__init__.py", line 2130, in get_db_prep_value
+    value = super().get_db_prep_value(value, connection, prepared)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\db\models\fields\__init__.py", line 1001, in get_db_prep_value
+    value = self.get_prep_value(value)
+  File "C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\Lib\site-packages\django\db\models\fields\__init__.py", line 2125, in get_prep_value
+    raise e.__class__(
+        "Field '%s' expected a number but got %r." % (self.name, value),
+    ) from e
+TypeError: Field 'timeLoan' expected a number but got datetime.timedelta(days=4).
+14-Jan-2511:43:20 - INFO - C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_loan.py changed, reloading.
+14-Jan-2511:44:34 - INFO - C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_loan.py changed, reloading.
+14-Jan-2511:47:16 - INFO - C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_loan.py changed, reloading.
+14-Jan-2511:47:26 - INFO - Suppression Emprunt CEFMediatheque | Nom du membre : Dupré Alex / Nom du médias : Plus grand que le ciel
+14-Jan-2511:47:31 - INFO - Suppression Emprunt CEFMediatheque | Nom du membre : Dupré Alex / Nom du médias : Plus grand que le ciel
+14-Jan-2511:48:28 - INFO - Suppression Emprunt CEFMediatheque | Nom du membre : Dupré Alex / Nom du médias : Plus grand que le ciel
+14-Jan-2511:48:36 - INFO - Suppression Emprunt CEFMediatheque | Nom du membre : Dupré Alex / Nom du médias : Plus grand que le ciel
+14-Jan-2511:48:37 - INFO - Suppression Emprunt CEFMediatheque | Nom du membre : Dupré Alex / Nom du médias : Plus grand que le ciel
+14-Jan-2511:48:37 - WARNING - Not Found: /favicon.ico
+14-Jan-2511:49:55 - INFO - C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_loan.py changed, reloading.
+14-Jan-2511:50:00 - INFO - Suppression Emprunt CEFMediatheque | Nom du membre : Dupré Alex / Nom du médias : Plus grand que le ciel
+14-Jan-2511:54:12 - INFO - Ajout Emprunt CEFMediatheque | Nom du membre : Dupré Alex / Nom du médias : Le Meurtre de Roger Ackroyd
+14-Jan-2511:55:58 - INFO - C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_loan.py changed, reloading.
+14-Jan-2511:56:19 - INFO - C:\Users\dupre\Desktop\FORMATION\Devoirs\MODULE3\02_Programmer-Python\CEF-Mediatheque-Project\CEF-Mediatheque\mediathequeCEF\logisticMediatheque\views\views_loan.py changed, reloading.
+14-Jan-2511:56:27 - INFO - Ajout Emprunt CEFMediatheque | Nom du membre : Dupré Alex / Nom du médias : Death of a Bachelor
+14-Jan-2511:56:43 - INFO - Suppression Emprunt CEFMediatheque | Nom du membre : Dupré Alex / Nom du médias : À qui la faute
+14-Jan-2511:56:48 - INFO - Ajout Emprunt CEFMediatheque | Nom du membre : Dupré Alex / Nom du médias : Death of a Bachelor
